@@ -1,0 +1,10 @@
+.con .conInner>p      { background:url(../img/sub/sejong_statue.png) 100% 0 no-repeat; padding:45px 295px 0 0; font-size:1.4rem; letter-spacing:-0.5px; color:#605d5d; line-height:25px; word-break:keep-all; padding-bottom:100px; }
+/* ---------------------------------------1024----------------------------------------- */
+@media all and (max-width:1024px){
+    .con .conInner>p        { padding:0; position:relative; background:none; color:#000; margin-bottom:30px; }
+    .con .conInner>p>span       { display:block; position:absolute; width:100%; height:100%; left:0; top:0; background:url(../img/sub/sejong_statue.png) 100% 100%/auto 90% no-repeat; opacity:0.3; }
+}
+/* ---------------------------------------768----------------------------------------- */
+@media all and (max-width:768px){
+    .con .conInner>p        { font-size:1.3rem; line-height:22px; margin-bottom:10px; }
+}

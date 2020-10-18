@@ -1,0 +1,29 @@
+.con .conWrap .con_list>p   { padding-top:30px; text-align:right; font-size:1.4rem; letter-spacing:-0.5px; color:#3d3d3d; margin-bottom:15px; }
+.con .conWrap .con_list>p>span  { color:#0069aa; }
+.con .conWrap .con_list>ul  { overflow:hidden; }
+.con .conWrap .con_list>ul>li   { float:left; width:calc(50% - 15px); height:301px; border:1px solid #ddd; border-top:3px solid #535274; margin-bottom:30px; }
+.con .conWrap .con_list>ul>li:nth-last-child(2n+1)      { margin-right:30px; }
+.con .conWrap .con_list .top  { height:183px; padding:20px; position:relative; }
+.con .conWrap .con_list .top>h3     { width:106px; height:143px; border:3px solid #dedede; float:left; }
+.con .conWrap .con_list .top>p      { float:left; padding-left:20px; font-size:1.4rem; letter-spacing:-0.5px; color:#0d9aae; font-weight:bold; line-height:21px; }
+.con .conWrap .con_list .top .plusBtn   { display:block; width:71px; height:22px; line-height:22px; padding-left:14px; background:url(../img/sub/plus_btn_icon.png) right 11px top 50%/10px no-repeat #336fb5; border-radius:11px; position:absolute; right:20px; bottom:20px; font-size:1.2rem; font-weight:bold; letter-spacing:-0.5px; color:#fff; }
+
+.con .conWrap .con_list .bottom     { height:114px; border-top:1px solid #ddd; background:#fafafa; }
+.con .conWrap .con_list .bottom>ul  { height:114px; padding:13px 0 0 20px; }
+.con .conWrap .con_list .bottom>ul>li   { height:30px; line-height:30px; font-size:1.2rem; letter-spacing:-0.5px; color:#333; padding-left:14px; background:url(../img/sub/list_style_square.gif) 0 50% no-repeat; }
+/* ---------------------------------1280----------------------------------- */
+@media all and (max-width:1280px){
+    .con .conWrap .con_list .bottom>ul>li       { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-right:10px; }
+}
+/* ---------------------------------768----------------------------------- */
+@media all and (max-width:1280px){
+    .con .conWrap .con_list>p       { word-break:keep-all; font-size:1.2rem; margin-bottom:6px; }
+
+    .con .conWrap .con_list>ul>li       { width:100%; }
+    .con .conWrap .con_list>ul>li:nth-last-child(2n+1)      { margin-right:0; }
+    .con .conWrap .con_list .top        { padding:20px 10px; }
+    .con .conWrap .con_list .top>p      { width:calc(100% - 106px); padding-left:10px; }
+
+    .con .conWrap .con_list .top .plusBtn   { width:90px; height:34px; line-height:33px; border-radius:17px; font-size:1.4rem; }
+    .con .conWrap .con_list .bottom>ul      { padding:10px 0 0 15px; }
+}

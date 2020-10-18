@@ -1,0 +1,102 @@
+.con .conWrap .conInner     { padding-top:30px; }
+.con .conWrap .conInner .title     { height:18px; line-height:18px; padding-left:23px; background:url(../img/sub/con_text_title.png) 0 50% no-repeat; margin-bottom:10px; font-size:1.6rem; font-weight:bold; letter-spacing:-0.1px; color:#333; text-indent:0; }
+.con .conWrap .conInner>ul  { overflow:hidden; padding-left:29px; }
+.con .conWrap .conInner>ul .subtitle>span  { display:block; height:19px; line-height:19px; margin-bottom:8px; font-size:1.4rem; font-weight:bold; color:#3c3c3c; background:url(../img/sub/con_text_subtitle.png) 0 50% no-repeat; padding-left:11px; } 
+.con .conWrap .conInner>ul .subtitle>ul     { padding:0 0 15px 10px; }
+.con .conWrap .conInner>ul .text   { line-height:20px; margin-bottom:8px; font-size:1.4rem; color:#3c3c3c; position:relative; padding-left:10px; word-break:keep-all; }
+.con .conWrap .conInner>ul .text:before         { content:'-'; position:absolute; left:0; }
+
+.con .conWrap .conInner .table  { overflow:hidden; padding:0 0 50px 50px; }
+.con .conWrap .conInner table caption   { font-size:1.4rem; font-weight:bold; letter-spacing:-0.5px; color:#3d3d3d; line-height:1; margin-bottom:10px; }
+.con .conWrap .conInner table   { border-top:2px solid #333; }
+.con .conWrap .conInner table tr    { height:41px; line-height:41px; }
+.con .conWrap .conInner table th    { border:1px solid #dedede; font-size:1.4rem; font-weight:bold; color:#3d3d3d; letter-spacing:-0.5px; }
+.con .conWrap .conInner table td    { border:1px solid #dedede; text-align:center; font-size:1.4rem; color:#555; letter-spacing:-1px; }
+
+.con .conWrap .conInner .graph1,
+.con .conWrap .conInner .graph2     { padding:9px 0 0 11px; }
+.con .conWrap .conInner .graph1 .subject    { width:150px; height:60px; line-height:60px; text-align:center; float:left; font-size:2.2rem; font-weight:bold; letter-spacing:-0.5px; color:#fff; margin-right:20px; }
+.con .conWrap .conInner .graph1 .vision     { height:150px; background:url(../img/sub/graph_arrow.png) right 236px bottom -70px no-repeat; }
+.con .conWrap .conInner .graph1 .vision .subject    { background:#0069aa; }
+.con .conWrap .conInner .graph1 .vision p   { float:left; width:619px; height:60px; line-height:60px; text-align:center; font-size:2.2rem; font-weight:bold; letter-spacing:-0.25px; color:#0069aa; border:1px solid #ddd; background:#fafafa; }
+
+.con .conWrap .conInner .graph1 .goal   { height:80px; }
+.con .conWrap .conInner .graph1 .goal .subject  { background:#0b8fa2; }
+.con .conWrap .conInner .graph1 .goal strong    { display:block; float:left; width:299px; height:60px; line-height:60px; text-align:center; border:1px solid #ddd; background:#fafafa; font-size:2.2rem; font-weight:bold; letter-spacing:-0.25px; color:#0c9aae; }
+.con .conWrap .conInner .graph1 .goal strong>span       { font-weight:inherit; }
+.con .conWrap .conInner .graph1 .goal strong:first-of-type    { margin-right:21px; }
+
+.con .conWrap .conInner .graph1 .strategy       { height:218px; background:url(../img/sub/graph_arrow.png) right 236px bottom -62px no-repeat; }
+.con .conWrap .conInner .graph1 .strategy .subject  { margin-top:25px; background:#039f83; }
+.con .conWrap .conInner .graph1 .strategy i    { display:block; float:left; width:110px; height:110px; border-radius:50%; border:1px solid #ddd; background:#fafafa; text-align:center; padding-top:32px; font-size:2.1rem; font-weight:bold; color:#039f83; line-height:24px; font-style:normal; margin-right:60px; }
+.con .conWrap .conInner .graph1 .strategy i:first-of-type   { margin-left:84px; }
+
+.con .conWrap .conInner .graph1 .value      { height:107px; }
+.con .conWrap .conInner .graph1 .value .subject     { background:#169242; }
+.con .conWrap .conInner .graph1 .value b        { display:block; float:left; width:147px; height:60px; line-height:60px; text-align:center; border:1px solid #ddd; background:#fafafa; font-size:2.2rem; font-weight:bold; letter-spacing:-0.5px; color:#169242; margin-right:10px; }
+.con .conWrap .conInner .graph1 .value b:last-of-type   { margin-right:0; }
+
+.con .conWrap .conInner .graph2 .box    { margin-bottom:25px; height:117px; }
+.con .conWrap .conInner .graph2 .box.third      { margin-bottom:0; }
+.con .conWrap .conInner .graph2 .box .left  { width:150px; height:117px; float:left; padding-top:35px; text-align:center; font-size:2.2rem; font-weight:bold; letter-spacing:-0.5px; color:#fff; line-height:26px; }
+.con .conWrap .conInner .graph2 .box.first .left    { background:#0069aa; }
+.con .conWrap .conInner .graph2 .box.second .left    { background:#0b8fa2; }
+.con .conWrap .conInner .graph2 .box.third .left    { background:#039f83; }
+.con .conWrap .conInner .graph2 .box .right     { width:calc(100% - 150px); height:117px; float:left; border:1px solid #ddd; background:#fafafa; padding:22px 0 0 25px; }
+.con .conWrap .conInner .graph2 .box.third .right   { padding:10px 0 0 25px; }
+.con .conWrap .conInner .graph2 .box .right>li  { height:24px; line-height:24px; font-size:1.4rem; letter-spacing:-0.25px; color:#555454; }
+/* ---------------------------------1280----------------------------------- */
+@media all and (max-width:1280px){
+    .con .conWrap .conInner table td        { padding:0 10px; }
+
+    .con .conWrap .conInner .graph1 .vision p       { width:calc(100% - 170px); }
+    .con .conWrap .conInner .graph1 .right      { width:calc(100% - 170px); float:left; position:relative; }
+    .con .conWrap .conInner .graph1 .goal strong        { width:calc(50% - 9px); }
+    .con .conWrap .conInner .graph1 .goal strong:first-of-type      { margin-right:18px; }
+
+    .con .conWrap .conInner .graph1 .strategy i         { margin:0; }
+    .con .conWrap .conInner .graph1 .strategy i:first-of-type       { margin:0; position:absolute; left:0; top:0; }
+    .con .conWrap .conInner .graph1 .strategy i:nth-of-type(2)      { position:absolute; left:50%; top:0; transform:translate(-50%,0); }
+    .con .conWrap .conInner .graph1 .strategy i:nth-of-type(3)       { margin:0; position:absolute; right:0; top:0; }
+
+    .con .conWrap .conInner .graph1 .value b        { width:calc(25% - 9px); margin-right:12px; }
+}
+/* ---------------------------------1024----------------------------------- */
+@media all and (max-width:1024px){
+    .con .conWrap .conInner .graph1 .vision p       { width:calc(100% - 170px); }
+
+    .con .conWrap .conInner .graph1 .goal strong        { font-size:2rem; }
+}
+/* ---------------------------------768----------------------------------- */
+@media all and (max-width:768px){
+    .con .conWrap .conInner>ul      { padding-left:10px; }
+    .con .conWrap .conInner .table      { padding:0 0 50px 0; }
+
+    .con .conWrap .conInner table td        { line-height:1.2; word-break:keep-all; padding:10px; }
+
+    .con .conWrap .conInner>ul.bottom       { padding:0; }
+    .con .conWrap .conInner>ul .subtitle>span   { margin-left:10px; }
+    .con .conWrap .conInner .graph1,
+    .con .conWrap .conInner .graph2         { padding:9px 0 0 0; }
+    .con .conWrap .conInner .graph1 .vision         { background:url(../img/sub/graph_arrow.png) center bottom -20px/50px no-repeat; }
+    .con .conWrap .conInner .graph1 .subject        { width:100%; margin:0; height:48px; line-height:48px; clear:both; }
+    .con .conWrap .conInner .graph1 .vision p       { width:100%; margin-top:8px; }
+    .con .conWrap .conInner .graph1 .right      { width:100%; clear:both; margin-top:8px; }
+    .con .conWrap .conInner .graph1 .goal       { height:auto; overflow:hidden; }
+    .con .conWrap .conInner .graph1 .goal strong        { width:calc(50% - 6px);  line-height:25px; font-size:1.8rem; word-break:keep-all; padding:20px 10px; height:92px; }
+    .con .conWrap .conInner .graph1 .goal strong:first-of-type      { margin-right:12px; }
+    .con .conWrap .conInner .graph1 .goal strong>span       { display:inline-block; }
+
+    .con .conWrap .conInner .graph1 .strategy       { background:url(../img/sub/graph_arrow.png) center bottom -20px/50px no-repeat; height:225px; }
+    .con .conWrap .conInner .graph1 .strategy .right        { height:110px; }
+
+    .con .conWrap .conInner .graph1 .value      { height:auto; overflow:hidden; margin-bottom:40px; }
+    .con .conWrap .conInner .graph1 .value b        { width:calc(25% - 6px); margin-right:8px; }
+
+    .con .conWrap .conInner .graph2 .box        { height:auto; overflow:hidden; }
+    .con .conWrap .conInner .graph2 .box .left      { width:100%; clear:both; height:auto; padding:8px 0; font-size:1.9rem; line-height:24px; }
+    .con .conWrap .conInner .graph2 .box .right         { width:100%; clear:both; height:auto; padding:10px 12px; }
+    .con .conWrap .conInner .graph2 .box.third .right       { padding:10px 12px; }
+    .con .conWrap .conInner .graph2 .box .right>li      { height:auto; line-height:22px; margin:4px 0; }
+    
+}

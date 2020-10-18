@@ -1,0 +1,50 @@
+.sub_visual>div>div     { background:url(../img/sub/sub_visual_bg02.png) 100% 100% no-repeat; }
+.con .conWrap .conInner article .step   { height:137px; background:url(../img/sub/step_arrow_bottom.png) left 315px bottom 10px/21px auto no-repeat; }
+.con .conWrap .conInner article .step:last-of-type  { background:none; }
+.con .conWrap .conInner article .step>div     { height:106px; border-radius:9px; }
+.con .conWrap .conInner article .step .side     { border:1px solid #ddd; background:#fafafa; word-break:keep-all; font-size:1.3rem; color:#393939; letter-spacing:-0.5px; }
+.con .conWrap .conInner article .step .left     { width:132px; margin-right:10px; float:left; padding:15px 0 0 7px;  }
+.con .conWrap .conInner article .step .middle   { width:346px; float:left; padding:0 19px; }
+.con .conWrap .conInner article .step .middle>p     { font-size:1.5rem; font-weight:600; color:#fff; letter-spacing:-0.5px; padding:12px 0 8px 0; }
+.con .conWrap .conInner article .step .middle>p.center  { padding:44px 0 0 0; }
+.con .conWrap .conInner article .step .middle>ul>li     { font-size:1.3rem; color:#fff; letter-spacing:-0.5px; }
+.con .conWrap .conInner article .step .middle#step1     { background:#0168b4; }
+.con .conWrap .conInner article .step .middle#step2     { background:#0188b4; }
+.con .conWrap .conInner article .step .middle#step3     { background:#019aa8; }
+.con .conWrap .conInner article .step .middle#step4     { background:#11b7b5; }
+.con .conWrap .conInner article .step .middle#step5     { background:#49b59a; }
+.con .conWrap .conInner article .step .middle#step6     { background:#26b473; }
+.con .conWrap .conInner article .step .right   { width:231px; float:right; padding:6px 0 0  7px;  }
+.con .conWrap .conInner article .step .right>span   { display:block; width:100%; height:9px; }
+/* -------------------------1024--------------------------- */
+@media all and (max-width:1024px){
+    /* container - snb */
+    /* .container .containWrap .snb    { width:182px; } */
+    .container .containWrap .snb .snbWrap .snb_tab>li>a     { height:auto; line-height:1.2; padding:5px 0 5px 10px; letter-spacing:-0.5px; }
+    /* container - contents */
+    /* .container .containWrap .con    { width:calc(100% - 182px); } */
+    .container .containWrap .snb .snbWrap>ul>li>a   { height:auto; line-height:1.25; padding:14px 10px 14px 0; word-break:keep-all; }
+
+    .con .conWrap .conInner article .step   { height:168px; background:url(../img/sub/step_arrow_bottom.png) left calc(50% - 30px) bottom 10px/21px auto no-repeat; }
+    .con .conWrap .conInner article .step>div   { height:137px; }
+    .con .conWrap .conInner article .step .left     { width:20.06%; padding:15px 5px 0 7px; word-break:break-all;  }
+    .con .conWrap .conInner article .step .middle   { width:45.33%; padding:0 19px; }
+    .con .conWrap .conInner article .step .middle>p.center  { padding:44px 0 0 0; }
+    .con .conWrap .conInner article .step .middle>ul>li     { font-size:1.3rem; color:#fff; letter-spacing:-0.5px; }
+    .con .conWrap .conInner article .step .right   { width:31.6%; padding:6px 5px 0  7px;  }
+}
+@media all and (max-width:768px){
+    .container .containWrap .snb .snbWrap>ul>li>a       { height:48px; line-height:48px; padding:0 20px; } 
+    .container .containWrap .snb .snbWrap .snb_tab>li>a     { height:24px; line-height:24px; padding:0 0 0 10px; }
+    .container .containWrap .snb .snbWrap .snb_tab>li>a:hover, .container .containWrap .snb .snbWrap .snb_tab>li.active>a   { color:rgb(250, 250, 83); }
+
+    .con .conWrap .conInner article .step   { background:url(../img/sub/step_arrow_bottom.png) left 50% bottom 0/21px auto no-repeat; height:auto; overflow:hidden; margin-bottom:20px; }
+    .con .conWrap .conInner article .step>div   { height:137px; margin-bottom:10px; }
+    .con .conWrap .conInner article .step .left     { float:none; height:auto; width:100%; padding:15px 10px; }
+    .con .conWrap .conInner article .step .middle   { float:none; width:100%; height:auto; padding:15px 10px; }
+    .con .conWrap .conInner article .step .middle>p     { padding:0 0 10px; text-align:center; }
+    .con .conWrap .conInner article .step .middle>p.center  { padding:0; }
+    .con .conWrap .conInner article .step .middle>ul    { padding-left:10px; }
+    .con .conWrap .conInner article .step .middle>ul>li     { font-size:1.3rem; color:#fff; letter-spacing:-0.5px; padding-bottom:4px; line-height:1.3; }
+    .con .conWrap .conInner article .step .right   { float:none; width:100%; height:auto; padding:15px 10px;  }
+}

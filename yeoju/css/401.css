@@ -1,0 +1,72 @@
+.con .conInner .read    { height:43px; line-height:43px; padding-left:2px; background:url(../img/sub/sub_subtitle_topbar.png) 0 0 no-repeat; font-size:1.8rem; font-weight:bold; letter-spacing:-0.5px; color:#201f1f; }
+.con .conInner>ul   { overflow:hidden; padding-bottom:30px; }
+.con .conInner .subtitle>span    { display:block; height:29px; line-height:29px; padding-left:16px; background:url(../img/sub/subtitle_list_style.png) 0 50% no-repeat; font-size:1.6rem; font-weight:bold; letter-spacing:-0.5px; color:#313131; }
+.con .conInner .subtitle>ul     { overflow:hidden; padding:4px 0 5px 21px; }
+.con .conInner .subtitle .text  { line-height:20px; margin-bottom:10px; padding-left:13px; background:url(../img/sub/text_list_style.png) 0 9px no-repeat; font-size:1.4rem; letter-spacing:-0.5px; color:#3c3c3c; word-break:keep-all; }
+
+.con .conInner .top    { height:28px; margin-bottom:10px; }
+.con .conInner .top>p    { float:left; padding-left:11px; position:relative; }
+.con .conInner .top>p:before   { content:''; width:4px; height:4px; background:#4c4c4c; position:absolute; left:0; top:50%; margin-top:-2px; }
+.con .conInner .top>p>i    { display:inline-block; height:28px; line-height:28px; font-style:normal; font-size:1.4rem; letter-spacing:-0.5px; color:#3d3d3d; }
+.con .conInner .top>p>i>span   { color:#817b15; }
+.con .conInner .top>p>i:first-of-type:after    { content:'|'; padding:0 10px; }
+.con .conInner .top .search    { float:right; }
+.con .conInner .top .search select     { display:block; width:116px; height:28px; line-height:28px; padding-left:37px; font-size:1.4rem; letter-spacing:-0.5px; color:#333; border:1px solid #999; float:left; margin-right:5px; }
+.con .conInner .top .search input  { display:block; width:216px; height:28px; line-height:28px; float:left; padding-left:10px; font-size:1.4rem; color:#333; border:1px solid #999; margin-right:5px; }
+.con .conInner .top .search button     { display:block; float:left; text-indent:0; width:66px; height:28px; line-height:28px; text-align:center; border-radius:3px; background:#717171; font-size:1.3rem; font-weight:bold; color:#fff; }
+
+.con .conInner .read_list       { overflow:hidden; border-top:2px solid #333; padding-bottom:23px; }
+.con .conInner .read_list>li    { height:183px; border-bottom:1px solid #dedede; padding:30px 0; }
+.con .conInner .read_list .listBox  { float:left; width:50%; height:122px; }
+.con .conInner .read_list .listBox .left     { float:left; width:162px; height:122px; padding:4px; border:1px solid #ddd; }
+.con .conInner .read_list .listBox .left>img    { width:100%; height:100%; }
+.con .conInner .read_list .listBox .right   { float:left; width:calc(100% - 162px); height:122px; padding:11px 0 0 9px; }
+.con .conInner .read_list .listBox .right>h3    { }
+.con .conInner .read_list .listBox .right>h3>a    { display:inline-block; font-size:1.6rem; line-height:1; font-weight:bold; letter-spacing:-0.5px; color:#893705; margin-bottom:16px; }
+.con .conInner .read_list .listBox .right>strong    { display:block; line-height:1; font-size:1.4rem; letter-spacing:-0.5px; color:#3d3d3d; margin-bottom:32px; }
+.con .conInner .read_list .listBox .right>i         { display:block; font-style:normal; line-height:1; font-size:1.3rem; letter-spacing:-0.5px; color:#7e7e7e; }
+
+.con .conInner .page_list      { width:538px; margin:0 auto; }
+.con .conInner .page_list>a    { display:block; float:left; width:31px; height:32px; line-height:30px; border:1px solid #d1d1d1; border-radius:1px; text-align:center; margin-right:8px; font-size:1.2rem; color:#484848; }
+.con .conInner .page_list>a:last-child     { margin-right:0; }
+.con .conInner .page_list>a:hover,
+.con .conInner .page_list>a.active     { border:0; background:#606060; color:#fff; }
+/* ---------------------------------------1024----------------------------------------- */
+@media all and (max-width:1024px){
+    .con .conInner .top         { height:auto; }
+    .con .conInner .top>p       { float:unset; }
+    .con .conInner .top .search         { float:unset; overflow:hidden; }
+    .con .conInner .top .search input       { width:calc(100% - 192px); margin:0; }
+    .con .conInner .top .search button      { float:right; }
+
+    .con .conInner .read_list       {  }
+    .con .conInner .read_list>li    { height:auto; border-bottom:0; padding:0; }
+    .con .conInner .read_list .listBox  { float:unset; width:100%; height:122px; border-bottom:1px solid #dedede; }
+    .con .conInner .read_list .listBox .left        { border:0; border-right:1px solid #ddd; }
+    .con .conInner .read_list .listBox .right   { padding:15px 0 0 9px; }
+
+    .con .conInner .page_list      { width:414px; margin:0 auto; overflow:hidden; }
+    .con .conInner .page_list>a    { width:24px; height:24px; line-height:24px; margin-right:6px; }
+}
+/* ---------------------------------------768----------------------------------------- */
+@media all and (max-width:768px){
+    .con .conInner .top .search         { float:unset; overflow:hidden; }
+    .con .conInner .top .search select      { width:70px; padding-left:10px; }
+    .con .conInner .top .search input       { width:calc(100% - 130px); }
+    .con .conInner .top .search button      { width:50px; }
+
+    .con .conInner .read_list .listBox  { height:auto; overflow:hidden; }
+    .con .conInner .read_list .listBox .left        { display:none; }
+    .con .conInner .read_list .listBox .right   { float:unset; width:100%; height:auto; padding:15px 0 0 9px; position:relative; }
+    .con .conInner .read_list .listBox .right>h3        { padding-right:125px; }
+    .con .conInner .read_list .listBox .right>h3>a      { width:100%; margin-bottom:0; padding-bottom:16px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .con .conInner .read_list .listBox .right>strong        { margin-bottom:15px; }
+    .con .conInner .read_list .listBox .right>i         { position:absolute; right:0; top:15px; letter-spacing:-0.5px; }
+
+    .con .conInner .page_list      { width:264px; }
+    .con .conInner .page_list>a:nth-child(8),
+    .con .conInner .page_list>a:nth-child(9),
+    .con .conInner .page_list>a:nth-child(10),
+    .con .conInner .page_list>a:nth-child(11),
+    .con .conInner .page_list>a:nth-child(12)       { display:none; }
+}

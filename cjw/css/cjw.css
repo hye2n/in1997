@@ -1,0 +1,859 @@
+@charset "utf-8";
+@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@font-face {
+	font-family:nbgR;
+	src:url(fonts/NanumBarunGothic.eot?#iefix) format("embedded-opentype");
+	src:url(fonts/NanumBarunGothic.woff) format("woff");
+}
+
+/* reset */  
+* 			{margin: 0; padding: 0; box-sizing:border-box; font-family: 'Spoqa Han Sans',Arial,"맑은 고딕",sans-serif; font-weight:400; }
+ul, ol  	{list-style-type: none;}
+hr 			{display: none;}
+h1 			{margin: 0;}
+a 			{text-decoration: none;}
+.btn 		{border: none; background: none; text-indent: -9999px;}
+img 		{border: none;}
+html 		{font-size: 0.625em;}  /* 0.652rem = 10px = 1rem */
+body 		{font-family: 'Spoqa Han Sans',Arial,"맑은 고딕",sans-serif; line-height: 1; } 
+.blind 		{position: absolute; top: -9999px; left: -9999px;}
+.clear:after {content: ""; display: block; clear: both;}
+.pc 		{display: none;} 
+.slick-list			{ overflow:hidden; }
+.slick-slide		{ float:left; }
+
+/* header */
+header .fixbar 				{ width:100%; height:75px; background:#fff; position:fixed; left:0; top:0; text-align:center; z-index:1; }
+header .fixbar .searchBtn 	{ width:20px; height:20px; display:block; position:absolute; top:27px; left:18px; background:url(../img/cjw-icon-search1.png) 0 0 no-repeat; background-size:contain; }
+header .fixbar .logo 		{ width:91px; height:33px; display:inline-block; margin:21px auto; background:url(../img/cjw-logo-header.png) 0 0 no-repeat; background-size:contain; }
+header .fixbar .menuBtn 		{ width:24px; height:18px; display:block; position:absolute; top:27px; right:18px; }
+header .fixbar .menuBtn>span 	{ width:100%; height:4px; display:block; background:#000; border-radius:3px; margin-bottom:3px; }
+header .fixbar .menuBtn>span:last-child 	{ margin-bottom:0; }
+
+header .searchWrap  		{ display:none; width:100%; height:75px; background:#fff; position:fixed; left:0; top:0; padding:22px 0 21px; z-index:2; }
+header .searchWrap .searchInner 	{ width:90.933%; margin:0 auto; height:75px; display:flex; justify-content:space-between; }
+header .searchWrap a 		{ font-size:1.7rem; color:#959595; display:inline-block; line-height:32px; white-space:nowrap; left:0; }
+header .searchWrap input 	{ width:73.313%; height:32px; background:#eee; border-radius:4px; display:block; border:0; margin:0 8px 0;}
+header .searchWrap button 	{ width:45px; height:32px; position:relative; top:0; right:0; border-radius:5px; background:url(../img/cjw-icon-search2.png) 50% 50% no-repeat #777; background-size:15px; }
+header .searchWrap .loginNav 	{ display:none; }
+
+header .menuBox 			{ /*display:none;*/ position:fixed; top:0; left:0; width:100%; z-index:-2; height:100%; overflow:hidden; }
+header .menuBox .menuBg 	{ display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:none; overflow:hidden; background:rgba(0,0,0,0.7); }
+header .menuWrap 			{ width:254px; overflow:auto; background:#fff; position:absolute; right:0; margin-right:-254px; top:0; height:100%; }
+
+header .menuInner 				{ width:100%; padding:31px 25px 0 18px; margin:0 auto; }
+header .menuInner .menuTop 		{ width:100%; height:48px; padding-bottom:26px; border-bottom:2px solid #595959; }
+header .menuInner .menuTop>h2 	{ width:61px; height:22px; float:left; text-indent:-9999px; }
+header .menuInner .menuTop>h2>a	{ display:block; width:100%; height:100%; background:url(../img/cjw-logo-header.png) 0 0 no-repeat; background-size:contain; }
+header .menuInner .menuTop>a 	{ display:block; line-height:22px; float:right; font-size:1.3rem; color:#02b5d6; }
+
+.menuInner .mainmenu>li>a 		{ display:block; width:100%; height:60px; line-height:60px; font-size:1.7rem; color:#595959; border-bottom:1px solid #959595; padding-left:10px; background:url(../img/cjw-arrow-nav-bottom.png) right 6px top 50% no-repeat; background-size:15px auto; }
+.menuInner .mainmenu>li>a.open 	{ background:url(../img/cjw-arrow-nav-top.png) right 6px top 50% no-repeat; background-size:15px auto; }
+.menuInner .mainmenu>li:first-child>a 	{ border-top:0; } 
+.menuInner .mainmenu>li:last-child>a 	{ border-bottom:0; } 
+
+.mainmenu .sidemenuWrap 	{ display:none}
+.mainmenu .sidemenu 		{ width:100%; background:#f8f8f8; padding:0 13px 0 10px; border-bottom:1px solid #959595; }
+.mainmenu>li:nth-of-type(6) .sidemenu		{ border-bottom:0; border-top:1px solid #959595; }
+.mainmenu .sidemenu>ul>li>a	{ display:block; width:100%; height:45px; line-height:45px; padding-left:12px; border-bottom:1px solid #cfcfcf; font-size:1.4rem; color:#747474; }
+.mainmenu .sidemenu>ul>li:last-child>a 	{ border-bottom:0; }
+.mainmenu .right 	{ display:none; }
+
+.menuBox .menuWrap>a 		{ display:block; width:100%; height:58px; background:#02b5d6; line-height:57px; color:#fff; font-size:1.7rem; padding:0 25px 0 28px;}
+.menuBox .menuWrap>a:first-of-type 		{ border-bottom:1px solid rgba(129,218,235,0.5); background:url(../img/cjw-icon-login.png) right 27px top 50% no-repeat #02b5d6; background-size:27px auto; }
+.menuBox .menuWrap>a:nth-of-type(2) 	{ border-top:1px solid rgba(129,218,235,0.5); background:url(../img/cjw-icon-phone.png) right 25px top 50% no-repeat #02b5d6; background-size:27px auto;}
+
+/*main*/
+main .visual 		{ width:100%; height:550px; text-align:center; margin-top:75px; padding:173px 0 0; background:url(../img/cjw-bg-main.jpg) 50% 50% no-repeat; background-size:auto 550px; position:relative; }
+main .visual p 		{ font-size:1.8rem; color:#fff; line-height:1; white-space:nowrap; }
+main .visual p span:nth-child(1) 	{ color:#81ebff; }
+main .visual p span:nth-child(2) 	{ color:#fff857; }
+main .visual b 		{ display:block; font-weight:normal; font-size:4.3rem; color:#fff; line-height:68px; margin-bottom:12px; white-space:nowrap; text-align:center; }
+main .visual i 		{ display:block; font-style:normal; font-size:1.4rem; color:#fff; line-height:18px; margin-bottom:29px; word-break:keep-all; width:100%; padding:0 38px 0; }
+main .visual a.goBtn 		{ display:block; width:311px; height:50px; line-height:46px; background:rgba(0,0,0,0.4); border:2px solid rgba(255,255,255,0.4); border-radius:5px; font-size:1.5rem; color:#fff; margin:0 auto; }
+main .visual a.arrowL 		{ display:none; }
+main .visual a.arrowR 		{ display:none; }
+
+.menuBar 		{ width:100%; height:50px; border-bottom:1px solid #959595; background:#fff; padding:0 15px 0; overflow:hidden; z-index:9999; text-align:center; }
+.menuBar ul 	{ width:100%; height:49px; margin:0 auto; }
+.menuBar li 	{ width:25%; float:left; line-height:49px; }
+.menuBar li a 	{ display:block; height:49px; line-height:49px; text-align:center; font-size:1.3rem; color:#959595;}
+.menuBar li a.focus 	{ color:#02b5d6; }
+.menuBar.barfix 	{ position:fixed; top:75px; left:0; z-index:9999; }
+
+/*브랜드스토리*/
+.brandstory 	{ width:100%; height:418px; background:#f8f8f8; padding:27px 0 0; position:relative; }
+.brandstory .arrowL 		{ display:none; }
+.brandstory .arrowR 		{ display:none; }
+.brandstory .story 			{ width:82.93%; margin:0 auto; position:relative; }
+.brandstory .storyWrap 		{ width:100%; height:328px; border:3px solid #f47933; border-radius:4px; padding:23px 18px 0 14px; background:url(../img/cjw-bg-smart.jpg) 100% 100% no-repeat #fff; background-size:auto 328px; }
+.brandstory .storyWrap h3 	{ width:72px; height:27px; background:url(../img/cjw-logo-smart.png) 0 100% no-repeat; background-size:auto 25px; text-indent:-9999px; margin-bottom:8px; }
+.brandstory .storyWrap b 	{ display:block; line-height:24px; font-size:2rem; color:#343434; font-weight:normal; margin-bottom:7px; }
+.brandstory .storyWrap p 	{ line-height:15px; font-size:1.3rem; color:#343434; word-break:keep-all; margin-bottom:13px; }
+.brandstory .storyWrap a 	{ display:block; width:150px; height:35px; border:2px solid #cfcfcf; line-height:31px; padding-left:24px; background:url(../img/cjw-plus-story-orange.png) right 23px top 50% no-repeat #fff; background-size:7px auto; font-size:1.1rem; color:#343434; }
+
+.brandstory .fresh 			{ border:3px solid #01b5d6; background:url(../img/cjw-bg-fresh.jpg) 100% 100% no-repeat #fff; background-size:auto 328px; }
+.brandstory .fresh h3 		{ background:url(../img/cjw-logo-fresh.png) 0 0 no-repeat; background-size:auto 27px; }
+.brandstory .fresh a 		{ background:url(../img/cjw-plus-story-blue.png) right 23px top 50% no-repeat #fff; background-size:7px auto; }
+
+.brandstory .classic 		{ border:3px solid #ef4665; background:url(../img/cjw-bg-classic.jpg) 100% 100% no-repeat #fff; background-size:auto 328px; }
+.brandstory .classic h3 	{ background:url(../img/cjw-logo-classic.png) 0 100% no-repeat; background-size:auto 25px; }
+.brandstory .classic a 		{ background:url(../img/cjw-plus-story-red.png) right 23px top 50% no-repeat #fff; background-size:7px auto; padding-left:19px; }
+
+/*푸드캐스트*/
+.foodcast 				{ position:relative; width:100%; background:#f8f8f8; }
+.sectionV		{ width:100%; height:147px; background:url(../img/cjw-bg-foodCast.jpg) 50% 0 no-repeat; background-size:cover; text-align:center; padding:26px 0 0; }
+.sectionV h3 	{ font-weight:normal; color:#fff; font-size:3.3rem; line-height:55px; }
+.sectionV a 	{ display:block; width:230px; margin:0 auto; height:40px; border:2px solid rgba(255,255,255,0.4); border-radius:2px; line-height:36px; font-size:1.3rem; color:#fff; background:url(../img/cjw-plus-section-blue.png) right 31px top 50% no-repeat rgba(0,0,0,0.4); background-size:auto 10px; text-align:left; padding-left:34px; }
+
+.sectionM 		{ display:block; width:82.93%; margin:19px auto 61px; padding:2px 2px 14px 2px; border:1px solid #959595; background:#fff; border-radius:4px; }
+.sectionM>a 	{ display:block; width:100%; height:199px; overflow:hidden; margin-bottom:14px; background:url(../img/cjw-img-foodCast.jpg) 50% 50% no-repeat; background-size:cover; }
+.sectionM i 	{ display:block; font-style:normal; text-align:center; word-break:keep-all; font-size:1.3rem; color:#626262; line-height:15px; padding:0 10px 0; }
+
+.sectionBtn 	{ display:block; width:82.93%; height:100px; border-radius:5px; margin:0 auto 11px; padding:25px 40px 0 99px; background:url(../img/cjw-icon-foodLab.png) 14px 50% no-repeat #02b5d6; background-size:58px auto; position:relative; }
+.sectionBtn strong 	{ display:block; text-indent:1px; font-weight:normal; font-size:2rem; color:#000; line-height:1; margin-bottom:7px; white-space:nowrap; }
+.sectionBtn p 		{ font-size:1.1rem; color:#000; line-height:13px; word-break:keep-all; letter-spacing:-1px; }
+.sectionBtn a 	{ display:block; position:absolute; width:16px; height:29px; right:12px; top:50%; margin-top:-15px; background:url(../img/cjw-arrow-slider-right.png) 0 0 no-repeat; background-size:contain; text-indent:-9999px; }
+
+.second 	{ height:113px; margin:0 auto 30px; background:url(../img/cjw-icon-bottleRecipe.png) 14px 50% no-repeat #76d9c5; background-size:58px auto; }
+
+.sectionBtn.tablet 	{ display:none; }
+.sectionBtn.tablet>span 	{ display:none; }
+
+.foodcast .castImg 	{ display:none; }
+
+/*푸드노하우*/
+.foodknowhow 		{ position:relative; width:100%; background:#f8f8f8; }
+.foodknowhow .sectionV		{ background:url(../img/cjw-bg-foodKnowhow-mobile.jpg) 50% 0 no-repeat; background-size:cover; }
+.foodknowhow .sectionV a 	{ background:url(../img/cjw-plus-section-yellow.png) right 31px top 50% no-repeat rgba(0,0,0,0.4); background-size:auto 10px; }
+.foodknowhow .sectionM 		{ margin:19px auto 51px; }
+.foodknowhow .sectionM>a 	{ background:url(../img/cjw-img-specialRecipe.jpg) 50% 50%; background-size:cover; }
+.foodknowhow .sectionBtn 	{ height:113px; margin:0 auto 10px; background:url(../img/cjw-icon-cjwRecipe.png) 12px 50% no-repeat #76d9c5; background-size:68px auto; }
+.foodknowhow .second 		{ height:90px; margin:0 auto 36px; background:url(../img/cjw-icon-eShop.png) 17px 50% no-repeat #f4cb4d; background-size:62px auto; }
+
+.foodknowhow .knowNav 		{ display:none; }
+.foodknowhow .knowImg 		{ display:none; }
+
+/*청정원프렌즈*/
+.cjwfriends 		{ position:relative; width:100%; background:#f8f8f8; }
+.cjwfriends .sectionV 		{ background:url(../img/cjw-bg-friends.jpg) 50% no-repeat; background-size:cover; }
+.cjwfriends .sectionV a 	{ background:url(../img/cjw-plus-section-blue.png) right 31px top 50% no-repeat rgba(0,0,0,0.4); background-size:auto 10px; }
+
+.cjwfriends .friendsImg 	{ display:none; }
+
+.cjwfriends .friendsInner 	{ width:82.93%; height:215px; margin:19px auto 10px; background:url(../img/cjw-icon-foodBox.png) right -30px top 100% no-repeat #f4cb4d; background-size:auto 139px; padding:23px 11px 0 11px; position:relative; }
+.cjwfriends .friendsInner s 	{ display:none; }
+.cjwfriends .friendsInner b 	{ display:block; font-size:1.8rem; color:#000; line-height:20px; margin-bottom:13px; word-break:keep-all; font-weight:normal; height:59px;  }
+.cjwfriends .friendsInner i 	{ display:block; width:67.961%; border-bottom:3px solid rgba(255,255,255,.5); margin-bottom:13px; }
+.cjwfriends .friendsInner p  	{ line-height:13px; font-size:1.1rem; color:#000; margin-bottom:22px; }
+.cjwfriends .friendsInner a 	{ display:block; width:145px; height:35px; background:#fae5a6; border:2px solid #fff; border-radius:2px; line-height:31px; text-align:center; color:#000; font-size:1.3rem; position:absolute; top:159px; }
+
+.cjwfriends .sectionBtn 	{ border-radius:0; height:100px; margin:0 auto 10px; background:url(../img/cjw-icon-friendsPanel.png) 15px 50% no-repeat #02b5d6; background-size:68px auto; padding:20px 40px 0 99px;  }
+.cjwfriends .sectionBtn strong 	{ font-size:1rem; color:#fff; display:block; line-height:1; font-weight:normal; }
+.cjwfriends .sectionBtn p 	 	{ color:#fff; }
+
+.cjwfriends .talk 		{ width:82.93%; margin:0 auto; overflow:hidden; padding-bottom:32px; }
+.cjwfriends .talk a 	{ display:block; width:50%; height:113px; border:2px solid #cfcfcf; text-align:center; float:left; padding-top:82px; font-size:1.2rem; color:#000; }
+.cjwfriends .talk a:first-child 	{ border-right:1px solid #cfcfcf; background:url(../img/cjw-icon-foodEditor.png) 50% 13px no-repeat #fff; background-size:62px auto; }
+.cjwfriends .talk a:nth-child(2) 	{ border-left:1px solid #cfcfcf; background:url(../img/cjw-icon-meetingTalk.png) 50% 17px no-repeat #fff; background-size:auto 53px; }
+.cjwfriends .talk a span 	{ display:none; }
+
+.cjwfriends .talk .friendsImg 	{ display:none; }
+
+/*청정원SNS*/
+.cjwsns 		{ position:relative; width:100%; background:#fff; padding-top:36px; }
+.cjwsns>b 		{ display:block; text-align:center; font-weight:normal; font-size:3.3rem; color:#000; line-height:1; margin-bottom:14px; }
+.cjwsns>i 		{ display:block; text-align:center; font-style:normal; font-size:1.4rem; color:#4b4b4b; }
+
+.cjwsns .sns 	{ width:310px; padding:0 15px; height:35px; margin:20px auto 31px; overflow:hidden; }
+.cjwsns .sns li { width:calc(16.666% - 15px); height:35px; margin-right:18px; float:left; }
+.cjwsns .sns li:nth-of-type(6) 	{ margin-right:0; }
+.cjwsns .sns li a 	{ display:block; width:100%; height:100%; }
+.cjwsns .sns img 	{ display:block; width:100%; height:auto; }
+
+.cjwsns .snsNotice 	{ display:none; }
+
+.cjwsns .snsInner 			{ width:82.93%; height:160px; margin:0 auto; border:2px solid #f8f7f7; overflow:hidden; }
+.cjwsns .snsInner:last-of-type 	{ border-top:0; margin-bottom:33px; }
+.cjwsns .snsInner>a 		{ width:50%; display:block; height:160px; float:left; background:url(../img/cjw-img-snsNaver.jpg) 50% 50% no-repeat; background-size:cover; border-right:1px solid #f8f7f7; }
+.cjwsns .snsInner>div 		{ width:50%; float:left; padding:18px 0 0 10px; }
+.cjwsns .snsInner>div h3 	{ height:18px; line-height:18px; font-size:1.25rem; font-weight:normal; color:#000; background:url(../img/cjw-sns-blog.png) right 5px top 0 no-repeat; background-size:18px; margin-bottom:40px; }
+.cjwsns .snsInner>div a 	{ display:block; line-height:14px; font-size:1.25rem; color:#494949; word-break:keep-all; padding-right:5px; letter-spacing:-0.5px; }
+.cjwsns .snsInner>div a:hover 	{ text-decoration:underline; }
+
+.cjwsns .snsInner:last-of-type>a 	{ background:url(../img/cjw-img-snsFacebook.jpg) 50% 50% no-repeat; background-size:cover; border-right:0; border-left:1px solid #f8f7f7; }
+.cjwsns .snsInner:last-of-type>div h3 	{ background:url(../img/cjw-sns-facebook.png) right 8px top 0 no-repeat; background-size:18px; margin-bottom:40px; }
+.cjwsns .snsInner:last-of-type>div a 		{ padding-right:8px; }
+
+/*footer*/
+footer 					{ width:100%; background:#fbfbfb; }
+footer .footerMenu 		{ overflow:hidden; padding-top:50px; position:relative; }
+footer .footerMenu li a 	{ display:block; width:50%; float:left; height:50px; line-height:50px; font-size:1.2rem; color:#767676; border-bottom:1px solid #cfcfcf;  }
+
+footer .footerMenu li:nth-child(1) a,
+footer .footerMenu li:nth-child(3) a,
+footer .footerMenu li:nth-child(5) a 	{ border-right:1px solid #cfcfcf; padding-left:33px; }
+
+footer .footerMenu li:nth-child(2) a,
+footer .footerMenu li:nth-child(4) a,
+footer .footerMenu li:nth-child(6) a 	{ padding-left:26px; }
+
+footer .footerMenu .famsite 	{ color:#02b5d6; width:100%; border-top:1px solid #cfcfcf; padding-left:33px; position:absolute; top:0; left:0; }
+footer .footerMenu li:nth-child(1) a 	{ color:#000; }
+footer .footerMenu .ccm 	{ font-size:1rem; padding-left:65px; background:url(../img/cjw-logo-ccm.png) left 33px top 50% no-repeat; background-size:25px; border-right:1px solid #cfcfcf; }
+footer .footerMenu .wa 		{ font-size:1rem; padding-left:51px; background:url(../img/cjw-logo-wa.png) left 26px top 50% no-repeat; background-size:18px auto;}
+
+footer .footerMenu .footerSns 	{ display:none; }
+
+footer .footerInfo 			{ text-align:center; }
+footer .footerInfo h2 		{ width:40px; height:60px; margin:29px auto 22px; background:url(../img/cjw-logo-footer.png) 0 0 no-repeat; background-size:contain; text-indent:-9999px; }
+footer .footerInfo ul 		{ margin-bottom:24px; }
+footer .footerInfo li 		{ display:inline-block; font-size:1.1rem; color:#666; line-height:16px; }
+footer .footerInfo li:last-of-type 	{ display:block; }
+
+footer .footerInfo li:nth-of-type(1),
+footer .footerInfo li:nth-of-type(2),
+footer .footerInfo li:nth-of-type(3),
+footer .footerInfo li:nth-of-type(4)	{ display:none; }
+
+footer .footerInfo li:nth-of-type(1):after,
+footer .footerInfo li:nth-of-type(2):after,
+footer .footerInfo li:nth-of-type(4):after,
+footer .footerInfo li:nth-of-type(5):after { content:'|'; padding:0 11px 0;}
+
+footer .footerInfo p 		{ width:100%; height:45px; line-height:45px; text-align:center; font-size:1rem; color:#fff; background:#666; }
+footer .footerInfo span 	{ display:none; }
+footer .footerInfo>a 		{ display:none; }
+
+/*태블릿 768px*/
+@media all and (min-width:768px){
+	/*header*/
+	header .fixbar 				{ height:80px; }
+	header .fixbar .searchBtn 	{ width:30px; height:30px; top:30px; left:40px; }
+	header .fixbar .logo 		{ width:107px; height:38px; margin:26px auto 16px; }
+	header .fixbar .menuBtn 		{ width:42px; height:26px; top:32px; right:40px; }
+	header .fixbar .menuBtn>span 	{ height:6px; border-radius:3px; margin-bottom:4px; }
+	
+	header .searchWrap  		{ display:none; height:80px; padding:23px 38px 17px; }
+	header .searchWrap a 		{ font-size:2.1rem; line-height:40px; }
+	header .searchWrap input 	{ width:79.48%; height:40px; margin:0 15px 0;}
+	header .searchWrap button 	{ width:70px; height:40px; background-size:20px; }
+	header .searchWrap .searchInner 	{ width:100%; }
+	
+	header .menuBox 			{  }
+	header .menuWrap 			{ width:508px; margin-right:-508px; }
+
+	header .menuInner 				{ padding:29px 51px 0 36px; }
+	header .menuInner .menuTop 		{ height:53px; padding-bottom:16px; margin-bottom:4px; }
+	header .menuInner .menuTop>h2 	{ width:100px; height:35px; }
+	header .menuInner .menuTop>a 	{ line-height:31px; font-size:2.1rem; }
+	
+	/*header 메뉴*/
+	.menuInner .mainmenu>li>a 		{ height:87px; line-height:87px; font-size:2.5rem; padding-left:18px; background:url(../img/cjw-arrow-nav-bottom.png) right 12px top 50% no-repeat; background-size:20px auto; }
+	
+	.mainmenu .sidemenu 		{ padding:0 25px 0 19px; }
+	.mainmenu .sidemenu>ul>li>a	{ height:70px; line-height:70px; padding-left:21px; font-size:2.1rem; }
+
+	.menuBox .menuWrap>a 		{ height:99px; line-height:98px; font-size:2.5rem; padding:0 61px 0 54px;}
+	.menuBox .menuWrap>a:first-of-type 		{ background:url(../img/cjw-icon-login.png) right 61px top 50% no-repeat #02b5d6; background-size:40px auto; }
+	.menuBox .menuWrap>a:nth-of-type(2) 	{ background:url(../img/cjw-icon-phone.png) right 57px top 50% no-repeat #02b5d6; background-size:40px auto;}
+	
+	/*main*/
+	main .visual 		{ height:750px; margin-top:80px; padding:180px 0 0; background-size:auto 750px; }
+	main .visual p 		{ font-size:3.3rem; }
+	main .visual b 		{ font-size:7.5rem; line-height:116px; margin-bottom:9px; }
+	main .visual i 		{ font-size:2.4rem; line-height:29px; margin-bottom:34px; padding:0 125px 0; }
+	main .visual a.goBtn 		{ width:300px; height:70px; line-height:66px; font-size:2.1rem; }
+
+	.menuBar 		{ height:70px; padding:0; }
+	.menuBar ul 	{ width:auto; display:inline-block; height:69px; }
+	.menuBar li 	{ width:auto; line-height:69px; }
+	.menuBar li a 	{ display:block; padding:0 25px; height:69px; line-height:69px; font-size:1.7rem; position:relative; }
+	.menuBar li a:after 	{ content:'|'; font-size:1.7rem; position:absolute; right:0; color:#959595; }
+	.menuBar li:nth-child(4) a:after 	{ content:none; }
+	.menuBar.menufix 		{ position:fixed; left:0; top:80px; z-index:99999; }
+	
+	/*브랜드스토리*/
+	.foodcast 		{ overflow:hidden; }
+	.brandstory 	{ height:508px; padding:36px 0 0; }
+	.brandstory .slick-slide:nth-of-type(2n) 	{ margin-left:3px; }
+	.brandstory .slick-slide:nth-of-type(2n+1) 	{ margin-right:3px; }
+	.brandstory .story 		{ width:84.375%; }
+	.brandstory .storyWrap 		{ height:375px; padding:22px 20px 0 22px; background-size:auto 375px; position:relative; }
+	.brandstory .storyWrap h3 	{ margin-bottom:15px; }
+	.brandstory .storyWrap b 	{ margin-bottom:12px; }
+	.brandstory .storyWrap p 	{ line-height:20px; font-size:1.6rem; margin-bottom:11px; }
+	.brandstory .storyWrap a 	{ width:188px; height:45px; line-height:41px; padding-left:16px; background:url(../img/cjw-plus-story-orange.png) right 20px top 50% no-repeat #fff; background-size:16px auto; font-size:1.5rem; position:absolute; top:188px; }
+	
+	.brandstory .fresh 			{ background-size:auto 375px; }
+	.brandstory .fresh p 		{ line-height:18px; }
+	.brandstory .fresh a 		{ background:url(../img/cjw-plus-story-blue.png) right 23px top 50% no-repeat #fff; background-size:7px auto; position:absolute; top:188px; }
+
+	.brandstory .classic 		{ background-size:auto 375px; }
+	.brandstory .classic a 		{ background:url(../img/cjw-plus-story-red.png) right 19px top 50% no-repeat #fff; background-size:15px auto; position:absolute; top:188px; }
+	
+	/*푸드캐스트*/
+	.foodcast 		{ overflow:hidden; }
+	.sectionV		{ height:294px; padding:52px 0 0; }
+	.sectionV h3 	{ font-size:5.833rem; line-height:114px; }
+	.sectionV a 	{ width:350px; height:70px; line-height:66px; font-size:2.083rem; background:url(../img/cjw-plus-section-blue.png) right 29px top 50% no-repeat rgba(0,0,0,0.4); background-size:auto 20px; padding-left:41px; }
+
+	.sectionM 		{ width:84.375%; margin:38px auto 122px; padding:3px 3px 33px 3px; border:2px solid #959595; }
+	.sectionM>a 	{ height:397px; margin-bottom:29px; background:url(../img/cjw-img-foodCast.jpg) 50% 50% no-repeat; background-size:cover; }
+	.sectionM i 	{ padding:0 70px 0; font-size:2.4rem; line-height:1; }
+
+	.sectionBtn 	{ width:84.375%; height:180px; margin:0 auto 20px; padding:55px 99px 0 157px; background:url(../img/cjw-icon-foodLab.png) 28px 50% no-repeat #02b5d6; background-size:100px auto; position:relative; }
+	.sectionBtn strong 	{ font-size:3.333rem; margin-bottom:17px; }
+	.sectionBtn p 		{ font-size:2rem; line-height:26px; }
+	.sectionBtn a 	{ width:29px; height:55px; right:35px; top:50%; margin-top:-23px; }
+	.second 	{ height:200px; margin:0 auto 106px; background:url(../img/cjw-icon-bottleRecipe.png) 28px 50% no-repeat #76d9c5; background-size:99px auto; }
+	
+	/*푸드노하우*/
+	.foodknowhow 		{ overflow:hidden; }
+	.foodknowhow .sectionBtn 	{ padding:41px 99px 0 211px; }
+	.foodknowhow .sectionV a 	{ background:url(../img/cjw-plus-section-yellow.png) right 29px top 50% no-repeat rgba(0,0,0,0.4); background-size:auto 20px; }
+	.foodknowhow .sectionM 		{ margin:68px auto 90px; }
+	.foodknowhow .sectionBtn 	{ height:180px; background:url(../img/cjw-icon-cjwRecipe.png) 41px 50% no-repeat #76d9c5; background-size:110px auto; }
+	.foodknowhow .second 		{ height:180px; margin:0 auto 109px; background:url(../img/cjw-icon-eShop.png) 46px 50% no-repeat #f4cb4d; background-size:100px auto; }
+	
+	/*청정원프렌즈*/
+	.cjwfriends 		{ overflow:hidden; }
+	.cjwfriends .sectionV a 	{ background:url(../img/cjw-plus-section-blue.png) right 29px top 50% no-repeat rgba(0,0,0,0.4); background-size:auto 20px; }
+
+	.cjwfriends .friendsInner 	{ width:84.375%; height:430px; margin:38px auto 20px; background-size:auto 277px; padding:48px 190px 0 35px; position:relative; }
+	.cjwfriends .friendsInner b 	{ font-size:3.333rem; line-height:40px; margin-bottom:31px; height:115px; }
+	.cjwfriends .friendsInner i 	{ margin-bottom:28px; margin-left:2px; }
+	.cjwfriends .friendsInner p  	{ line-height:24px; font-size:2rem; margin-bottom:46px; }
+	.cjwfriends .friendsInner a 	{ width:250px; height:70px; line-height:66px; font-size:2.083rem; position:absolute; top:317px; }
+	
+	.cjwfriends .sectionBtn 	{ height:180px; margin:0 auto 40px; background:url(../img/cjw-icon-friendsPanel.png) 60px 50% no-repeat #02b5d6; background-size:110px auto; padding:25px 62px 0 211px;  }
+	.cjwfriends .sectionBtn strong 	{ font-size:1.798rem; line-height:51px; margin-bottom:0; }
+	.cjwfriends .sectionBtn p 	 	{ font-size:1.998rem; }
+
+	.cjwfriends .talk 		{ width:84.375%; padding-bottom:63px; }
+	.cjwfriends .talk a 	{ height:225px; padding-top:166px; font-size:2.083rem; }
+	.cjwfriends .talk a:first-child 	{ background:url(../img/cjw-icon-foodEditor.png) 50% 25px no-repeat #fff; background-size:123px auto; }
+	.cjwfriends .talk a:nth-child(2) 	{ background:url(../img/cjw-icon-meetingTalk.png) 50% 34px no-repeat #fff; background-size:auto 106px; }
+	
+	/*청정원SNS*/
+	.cjwsns 		{ padding-top:64px; }
+	.cjwsns>b 		{ font-size:5.833rem; line-height:103px; margin-bottom:0; }
+	.cjwsns>i 		{ font-size:2.083rem; line-height:1; }
+
+	.cjwsns .sns 	{ width:620px; height:70px; margin:50px auto 62px; }
+	.cjwsns .sns li { width:70px; height:70px; margin-right:40px; }
+
+	.cjwsns .snsInner 			{ width:84.375%; height:280px; }
+	.cjwsns .snsInner:last-of-type 	{ margin-bottom:86px; }
+	.cjwsns .snsInner>a 		{ height:280px; }
+	.cjwsns .snsInner>div 		{ padding:35px 0 0 20px; }
+	.cjwsns .snsInner>div h3 	{ height:36px; line-height:36px; font-size:1.8rem; background:url(../img/cjw-sns-blog.png) right 14px top 0 no-repeat; background-size:36px; margin-bottom:89px; }
+	.cjwsns .snsInner>div a 	{ line-height:24px; font-size:2rem; padding-right:15px; }
+
+	.cjwsns .snsInner:last-of-type>div h3 	{ background:url(../img/cjw-sns-facebook.png) right 16px top 0 no-repeat; background-size:36px; }
+	.cjwsns .snsInner:last-of-type>div a 		{ padding-right:16px; }
+	
+	/*footer*/
+	footer .footerMenu 			{ padding-top:100px; }
+	footer .footerMenu li a 	{ height:80px; line-height:80px; font-size:2rem; }
+
+	footer .footerMenu li:nth-child(1) a,
+	footer .footerMenu li:nth-child(3) a,
+	footer .footerMenu li:nth-child(5) a 	{ padding-left:59px; }
+
+	footer .footerMenu li:nth-child(2) a,
+	footer .footerMenu li:nth-child(4) a,
+	footer .footerMenu li:nth-child(6) a 	{ padding-left:51px; }
+
+	footer .footerMenu .famsite 	{ padding-left:59px; height:100px; line-height:100px; }
+	footer .footerMenu .ccm 	{ font-size:2rem; padding-left:101px; background:url(../img/cjw-logo-ccm.png) left 59px top 50% no-repeat; background-size:34px; }
+	footer .footerMenu .wa 		{ font-size:2rem; padding-left:93px; background:url(../img/cjw-logo-wa.png) left 51px top 50% no-repeat; background-size:32px auto;}
+
+	footer .footerInfo h2 		{ width:80px; height:119px; margin:43px auto 44px; }
+	footer .footerInfo ul 		{ margin-bottom:57px; }
+	footer .footerInfo li 		{ font-size:2.2rem; line-height:32px; }
+	footer .footerInfo li:first-of-type:after { content:'|'; padding:0 22px 0;}
+
+	footer .footerInfo p 		{ height:88px; line-height:88px; font-size:1.8rem; }
+}
+
+/*태블릿 1024px*/
+@media all and (min-width:1024px){
+	/*header*/
+	header 			{ width:100%; overflow:hidden; z-index:9999; }
+	header .fixbar 				{ display:none; }
+	
+	header .searchWrap  		{ display:block; height:57px; padding:20px 59px 13px; border-bottom:1px solid #cfcfcf; position:absolute; top:0; left:0;   }
+	header .searchWrap .searchInner 	{ display:block; width:100%; height:100%; margin:0; }
+	header .searchWrap a 		{ display:none; }
+	header .searchWrap input 	{ width:140px; height:23px; font-size:1.5rem; padding:0 15px 7px 0; margin:0; background:none; border-radius:0; margin:0; border-bottom:1px solid #969696; float:left; }
+	header .searchWrap button 	{ width:15px; height:15px; background:url(../img/cjw-icon-search1.png) 0 0 no-repeat; background-size:contain; float:left; margin-left:-15px; }
+	
+	header .searchWrap .loginNav 		{ display:block; float:right; width:auto; }
+	header .searchWrap .loginNav li 	{ float:left; }
+	header .searchWrap .loginNav a 		{ display:block; font-size:1.4rem; color:#808080; line-height:1; margin-top:2px;  }
+	header .searchWrap .loginNav li:first-child a 	{ color:#00b4d8; }
+	header .searchWrap .loginNav a:after 			{ content:'|'; font-size:1.5rem; color:#808080; padding:0 15px 0; }
+	header .searchWrap .loginNav li:nth-child(4) a:after 	{ content:none; }
+	
+	/*header 메뉴*/	
+	header .menuBox 			{ display:block; position:absolute; width:100%; height:390px; top:57px; left:0; z-index:9999; }
+	header .menuBox .menuBg 	{ display:none; }
+	header .menuWrap 			{ display:block; overflow:hidden; width:100%; height:100%; padding:0; background:none; margin-right:0; }
+	.menuBox .menuWrap>a 		{ display:none; }
+	header .menuBox.menuboxfix 	{ position:fixed; top:0; left:0; z-index:99999; }
+
+	header .menuInner 				{ width:100%; height:78px; padding:18px 59px 18px; margin:0; position:relative; background:#fff; }
+	header .menuInner .menuTop 		{ width:120px; height:42px; border:0; float:left; padding:0; margin:0; }
+	header .menuInner .menuTop>h2 	{ width:100%; height:42px; background:url(../img/cjw-logo-header.png) 0 0 no-repeat; background-size:contain; text-indent:-9999px; }
+	header .menuInner .menuTop>a 	{ display:none; }
+
+	.menuInner .mainmenu 		{ float:right; margin-top:17px; position:static; }
+	.menuInner .mainmenu>li 	{ float:left; padding:0; margin:0; position:static; }
+	.menuInner .mainmenu>li>a 		{ display:block; width:auto; height:17px; line-height:1; font-size:1.6rem; color:#000; border:0; padding:0; background:none; margin:0; position:relative; }
+	.menuInner .mainmenu>li>a.blue 	{ color:#2fb7e6; }
+	.menuInner .mainmenu>li>a:after 	{ content:'|'; font-size:1.6rem; padding:0 18px 0; color:#000; }
+	.menuInner .mainmenu>li:nth-of-type(6) a:after 	{ content:none; }
+	
+	.menuInner .mainmenu>li>a .arrow 	{ display:block; position:absolute; width:25px; height:14px; background:url(../img/cjw-arrow-nav-bottom-fill.png) 0 0 no-repeat; background-size:contain; left:calc((100% - 42px)/2 - 12px); top:44px; z-index:1; display:none; }
+	.menuInner .mainmenu>li:nth-of-type(6) a .arrow 	{ left:calc(50% - 12px); }
+	
+	.mainmenu .sidemenuWrap 	{ display:none; width:100%; height:311px; background:none; padding:0; border:0; position:absolute; border-top:1px solid #cfcfcf; left:0; top:78px; overflow:hidden; background:#fff; }
+	.mainmenu .sidemenu 		{ width:calc(100% - 496px); height:311px; float:left; background:none; padding:40px 0 40px 64px; }
+	.mainmenu>li:nth-of-type(6) .sidemenu		{ border:none; }
+	.mainmenu .sidemenu>ul 		{ width:464px; height:100%; float:right; column-count:2; column-gap:normal; }
+	.mainmenu .sidemenu>ul>li>a	{ height:46px; line-height:46px; padding-left:0; border:none; font-size:2rem; color:#000; white-space:nowrap; }
+	.mainmenu .sidemenu>ul>li>a:hover 		{ font-weight:600; }
+	.mainmenu .sidemenu>ul>li:last-child>a 	{ border-bottom:0; }
+	
+	
+	.mainmenu .right 			{ display:block; height:311px; width:496px; float:right; padding:10px 0 10px 0; background:url(../img/cjw-bg-nav-brandStory.jpg) right 59px top 100% no-repeat #fff; background-size:auto 260px; }
+	.mainmenu .right>div 		{ width:100%; height:100%; border-left:1px solid #cfcfcf; padding:42px 59px 0 35px; }
+	.mainmenu .right>div h3 	{ font-weight:normal; font-size:3.4rem; color:#000; line-height:1; }
+	.mainmenu .right>div>a 		{ display:block; width:110px; height:46px; border:2px solid #d9d9d9; line-height:42px; font-size:1.4rem; color:#343434; padding-left:13px; background:url(../img/cjw-plus-story-blue.png) right 12px top 50% no-repeat #fff; background-size:12px; margin-top:25px; }
+	.mainmenu .right>div p 		{ font-size:1.6rem; line-height:20px; margin-top:13px; color:#343434; }
+	
+	.mainmenu li:nth-of-type(1) .sidemenuWrap .sidemenu>ul { column-count:3; column-gap:normal; }
+	
+	.mainmenu li:nth-of-type(2) .right 		{ background:url(../img/cjw-bg-nav-foodCast.jpg) right 59px top 100% no-repeat #fff; background-size:auto 250px; }
+	
+	.mainmenu li:nth-of-type(3) .right 		{ background:url(../img/cjw-bg-nav-foodKnowhow.jpg) right 59px top 100% no-repeat #fff; background-size:auto 250px; }
+	
+	.mainmenu li:nth-of-type(4) .right		{ background:#fff;  }
+	.mainmenu li:nth-of-type(4) .right>div>ul	{ margin-top:26px; }
+	.mainmenu li:nth-of-type(4) .right>div>ul li	{ float:left; width:49px; height:49px; margin-right:10px;  }
+	.mainmenu li:nth-of-type(4) .right>div>ul a		{ display:block;  }
+	.mainmenu li:nth-of-type(4) .right>div>ul img	{ display:block; width:49px; height:49px; }
+	
+	.mainmenu li:nth-of-type(5) .right 			{ background:url(../img/cjw-bg-nav-friends.jpg) right 59px top 100% no-repeat #fff; background-size:auto 250px; }
+	
+	.mainmenu li:nth-of-type(6) .right 			{ background:url(../img/cjw-bg-nav-event.jpg) right 59px bottom 14px no-repeat #fff; background-size:auto 138px; }
+	
+	/*main*/
+	main .visual 		{ height:638px; margin-top:135px; padding:137px 0 0; background-size:cover; }
+	main .visual p 		{ font-size:3.749rem; }
+	main .visual b 		{ font-size:8.332rem; line-height:113px; margin-bottom:9px; }
+	main .visual i 		{ font-size:2.5rem; line-height:31px; margin-bottom:47px; padding:0 111px 0; }
+	main .visual a.goBtn 		{ width:350px; height:80px; line-height:76px; font-size:2.5rem; }
+	
+	.menuBar 		{ display:none; }
+	
+	/*브랜드스토리*/
+	.brandstory 	{ height:650px; padding:48px 93px 0; }
+	.brandstory .story 		{ width:100%; }
+	.brandstory .slick-slide:nth-of-type(2n) 	{ margin-left:10px; }
+	.brandstory .slick-slide:nth-of-type(2n+1) 	{ margin-right:10px; }
+	.brandstory .storyWrap 		{ height:500px; float:left; padding:30px 45px 0 35px; background-size:auto 400px; position:relative; margin:0; }
+	.brandstory .storyWrap h3 	{ width:96px; height:36px; background-position:0 0; background-size:96px auto; margin-bottom:19px; }
+	.brandstory .storyWrap b 	{ font-size:2.5rem; line-height:32px; margin-bottom:16px; }
+	.brandstory .storyWrap p 	{ line-height:25px; font-size:2.083rem; margin-bottom:41px; }
+	.brandstory .storyWrap a 	{ width:250px; height:60px; line-height:56px; padding-left:22px; background:url(../img/cjw-plus-story-orange.png) right 28px top 50% no-repeat #fff; background-size:20px auto; font-size:2.04rem; position:absolute; top:252px; }
+	
+	.brandstory .fresh 			{ background-size:auto 550px; }
+	.brandstory .fresh a 		{ background:url(../img/cjw-plus-story-blue.png) right 28px top 50% no-repeat #fff; background-size:20px auto; position:absolute; top:252px; }
+
+	.brandstory .classic 		{ background-size:auto 500px; }
+	.brandstory .classic a 		{ background:url(../img/cjw-plus-story-red.png) right 28px top 50% no-repeat #fff; background-size:20px auto; position:absolute; top:252px; }
+	
+	/*푸드캐스트*/
+	.foodcast 		{ height:930px; background:url(../img/cjw-bg-foodCast.jpg) 50% 0 no-repeat; background-size:cover; padding:74px 92px 76px; position:relative; }
+	.sectionV		{ background:none; width:290px; height:auto; padding:0; text-align:left; position:absolute; top:74px; left:92px; }
+	.sectionV h3 	{ font-size:5.833rem; line-height:1; margin-bottom:27px; }
+	.sectionV a 	{ width:290px; margin:0; height:78px; line-height:74px; font-size:2.135rem; background:url(../img/cjw-plus-section-blue.png) right 15px top 50% no-repeat rgba(0,0,0,0.4); background-size:auto 20px; padding-left:15px; }
+
+	.sectionM 		{ width:61.264%; height:780px; margin:0; padding:0; border:2px solid #fff; border-radius:0; border-top-left-radius:5px; border-top-right-radius:5px;  border-bottom-right-radius:5px; float:right; overflow:hidden; }
+	.sectionM>a 	{ display:block; width:100%; height:500px; overflow:hidden; margin:0; }
+	.sectionM img 	{ margin-bottom:0; width:auto; height:500px; border-bottom:1px solid #fff; }
+	.sectionM>i 	{ display:none; }
+
+	.sectionBtn 	{ width:38.736%; height:250px; margin:0; text-align:center; padding:40px 20px 38px; border-radius:0; border-top-left-radius:5px; background:#fff; float:left; margin-top:250px; position:relative; }
+	.sectionBtn strong 	{ font-size:3.333rem; margin-bottom:0; }
+	.sectionBtn strong:after 	{ content:''; display:block; width:60px; margin:16px auto 12px; height:3px; background:#02b5d6; }
+	.sectionBtn p 		{ font-size:2.083rem; line-height:23px; margin-bottom:20px; }
+	.sectionBtn a 	{ width:200px; height:50px; background:#02b5d6; margin:0 auto; position:static; text-indent:0; font-size:2.083rem; color:#fff; line-height:50px; padding:0; position:absolute; top:165px; left:41px; border-radius:2px; }
+	
+	.second 	{ float:left; height:280px; border-top-left-radius:0; border-bottom-left-radius:5px; margin:0; background:#02b5d6; }
+	.second strong 		{ color:#fff; }
+	.second strong:after 	{ background:#fff;  }
+	.second p 	{ color:#fff; }
+	.second a 	{ background:#fff; color:#000; position:absolute; top:192px; left:41px; }
+	
+	.sectionBtn.tablet 		{ display:block; margin:0; width:100%; padding:40px 20px 38px;  }
+	.sectionBtn.tablet p 	{ margin-bottom:10px; }
+	.sectionBtn.tablet s 	{ display:block; text-decoration:none; font-size:1.667rem; color:#909090; line-height:20px; word-break:keep-all; }
+	.sectionBtn.tablet a 	{ position:absolute; top:192px; }
+	
+	/*푸드노하우*/
+	.foodknowhow 		{ overflow:hidden; height:900px; padding:77px 0 76px 93px; background:url(../img/cjw-bg-foodKnowhow.jpg) 100% 125% no-repeat #f4f4f4; background-size:auto 450px; } 
+	.foodknowhow .sectionBtn 	{ padding:41px 99px 0 211px; }
+	.foodknowhow .sectionV  	{ background:none; }
+	.foodknowhow .sectionV h3 	{ color:#000; }
+	.foodknowhow .sectionV a 	{ background:url(../img/cjw-plus-section-yellow.png) right 15px top 50% no-repeat rgba(0,0,0,0.4); background-size:auto 20px; }
+	.foodknowhow .sectionM 		{ margin:0; width:65.091%; height:249px; border:1px solid #fff; border-top-left-radius:0; border-top-right-radius:0; border-bottom-right-radius:0; overflow:hidden; }
+	.foodknowhow .sectionM img 	{ width:100%; height:auto; }
+	
+	.foodknowhow .knowNav 		{ display:block; clear:both; float:left; width:34.909%; height:500px; background:#f4cb4d; padding:0 20px 0; border-top-left-radius:5px; border-bottom-left-radius:5px; margin-top:249px; }
+	.foodknowhow .knowNav li 	{ width:100%; height:125px; border-bottom:2px solid #fff; padding:32px 0 39px 0; position:relative; }
+	.foodknowhow .knowNav li:nth-child(4) 	{ border-bottom:0; }
+	.foodknowhow .knowNav li span 	{ display:block; font-size:1.675rem; line-height:1; margin-bottom:6px; }
+	.foodknowhow .knowNav li b  	{ display:block; font-size:3.352rem; line-height:1; font-weight:normal; }
+	.foodknowhow .knowNav li a 		{ display:block; width:25px; height:47px; position:absolute; right:0; top:39px; background:url(../img/cjw-arrow-section-right.png) 0 0 no-repeat; background-size:contain; }
+	
+	.foodknowhow .sectionBtn 	{ float:left; width:calc(65.091% - 236px); height:250px; background:#76d9c5; padding:37px 10px 36px; border-top-left-radius:0; border-bottom-right-radius:5px; margin:0; }
+	.foodknowhow .sectionBtn strong 		{ font-size:3.341rem; }
+	.foodknowhow .sectionBtn strong:after 	{ background:rgba(255,255,255,0.7); }
+	.foodknowhow .sectionBtn a 	{ background:#fff; color:#000; }
+	
+	.foodknowhow .sectionBtn.tablet 	{ border-bottom-right-radius:0; background:#fff; }
+	.foodknowhow .sectionBtn.tablet strong:after 	{ background:rgba(252,181,77,.7); }
+	.foodknowhow .sectionBtn.tablet a 	{ background:#fcb54d; color:#fff; top:165px; }
+	.foodknowhow .second 		{ display:none; }	
+	.foodknowhow .knowImg 		{ display:block; width:236px; height:250px; overflow:hidden; border:1px solid #fff; }
+	.foodknowhow .knowImg img 	{ width:auto; height:250px; }
+	
+	/*청정원프렌즈*/
+	.cjwfriends 		{ overflow:hidden; height:870px; padding:63px 92px 73px; background:url(../img/cjw-bg-friends.jpg) 50% 50% no-repeat; background-size:cover;  }
+	.cjwfriends .sectionV 	 	{ background:none; width:auto; }
+	.cjwfriends .sectionV a 	{ background:url(../img/cjw-plus-section-blue.png) right 15px top 50% no-repeat rgba(0,0,0,0.4); background-size:auto 20px; }
+	
+	.cjwfriends .sectionBtn 	{ width:39.167%; height:250px; margin:0; background:#02b5d6; padding:43px 20px 35px; float:right; }
+	.cjwfriends .sectionBtn strong 	{ font-size:1.667rem; line-height:1; margin-bottom:16px; }
+	.cjwfriends .sectionBtn strong:after 	{ content:none; }
+	.cjwfriends .sectionBtn p 	 	{ font-size:2.083rem; line-height:23px; }
+	.cjwfriends .sectionBtn a 		{ background:#fff; color:#000; }
+
+	.cjwfriends .friendsInner 	{ width:60.833%; height:484px; margin:0; background:url(../img/cjw-icon-foodBox.png) right 24px bottom 32px no-repeat #f4cb4d; background-size:auto 200px; padding:36px 90px 0 35px; float:left; position:relative; top:250px; }
+	.cjwfriends .friendsInner s 	{ display:block; text-decoration:none; font-size:1.8rem; color:#fff; margin-bottom:33px; }
+	.cjwfriends .friendsInner b 	{ font-size:3.333rem; line-height:34px; margin-bottom:33px; height:100px; margin-left:-2px; }
+	.cjwfriends .friendsInner i 	{ margin-bottom:22px; margin-left:-3px; }
+	.cjwfriends .friendsInner p  	{ line-height:24px; font-size:2rem; margin-bottom:46px; }
+	.cjwfriends .friendsInner a 	{ width:200px; height:50px; line-height:50px; background:#fff; border:0; border-radius:2px; font-size:2.083rem; position:absolute; top:321px;  }
+
+	.cjwfriends .talk 		{ width:39.167%; padding-bottom:63px; }
+	.cjwfriends .talk a 	{ width:100%; height:242px; padding-top:153px; font-size:2.397rem; }
+	.cjwfriends .talk a:first-child 	{ border-right:2px solid #cfcfcf; background:url(../img/cjw-icon-foodEditor.png) 50% 27px no-repeat #fff; background-size:113px auto; border-bottom:1px solid #cfcfcf; }
+	.cjwfriends .talk a:nth-child(2) 	{ border-left:2px solid #cfcfcf; background:url(../img/cjw-icon-meetingTalk.png) 50% 38px no-repeat #fff; background-size:auto 106px; border-top:1px solid #cfcfcf; }
+	.cjwfriends .talk a span 	{ display:block; font-size:1.6rem; line-height:20px; margin-top:8px; padding:0 22px 0; word-break:keep-all; color:rgba(0,0,0,0.7); }
+	
+	/*청정원SNS*/
+	.cjwsns 		{ height:965px; padding:50px 94px 94px; background:url(../img/cjw-bg-sns1.png) 100% 0 no-repeat,url(../img/cjw-bg-sns2.png) -140px 120% no-repeat #fff; background-size:300px auto,550px auto; }
+	.cjwsns>b 		{ font-size:5.833rem; line-height:135px; margin-bottom:0; }
+	.cjwsns>i 		{ font-size:2.917rem; line-height:1; }
+
+	.cjwsns .sns 	{ width:556px; height:56px; margin:39px auto 68px; }
+	.cjwsns .sns li { width:56px; height:56px; margin-right:44px; }
+
+	.cjwsns .snsInner 			{ width:calc(100% - 91px); height:246px; border:0; margin:0; padding:0; overflow:hidden; }
+	.cjwsns .snsInner>a 		{ width:323px; height:246px; border:1px solid #f8f7f7; border-right:0;  }
+	.cjwsns .snsInner>div 		{ width:calc(100% - 323px); height:246px; padding:31px 0 0 35px; border:1px solid #f8f7f7; background:#fff; }
+	.cjwsns .snsInner>div h3 	{ height:43px; line-height:43px; font-size:2.083rem; background:url(../img/cjw-sns-blog.png) right 23px top 0 no-repeat; background-size:43px; margin-bottom:48px; }
+	.cjwsns .snsInner>div a 	{ line-height:29px; font-size:2.5rem; padding-right:15px; }
+	
+	.cjwsns .snsInner:last-of-type 	{ clear:both; margin-bottom:0; float:right; }
+	.cjwsns .snsInner:last-of-type>a 	{ float:left; border-left:0; border-top:0; }
+	.cjwsns .snsInner:last-of-type>div	{ float:left; border-top:0; }
+	.cjwsns .snsInner:last-of-type>div h3 	{ background:url(../img/cjw-sns-facebook.png) right 21px top 0 no-repeat; background-size:43px; }
+	.cjwsns .snsInner:last-of-type>div a 		{ padding-right:30px; }
+	
+	/*footer*/
+	footer 		{ overflow:hidden; }
+	footer .footerMenu 			{ padding:0; text-align:center;  border-bottom:1px solid #e5e5e5; }
+	footer .footerMenu ul 		{ width:836px; margin:0 auto; height:99px; line-height:98px; position:relative; }
+	footer .footerMenu ul li 	{ height:99px; line-height:98px; float:left;  padding-top:42px; }
+	footer .footerMenu li a 	{ width:auto; font-size:1.803rem; line-height:1; height:auto; border-bottom:0; padding:0; color:#000; }
+	footer .footerMenu .famsite 		{ width:auto; border-top:0; padding-left:0; line-height:1; height:auto; position:static; }
+	footer .footerMenu li a:after 	{ content:'|'; font-size:1.803rem; color:#000; padding:0 23px 0; }
+	footer .footerMenu li:nth-of-type(7) a:after,
+	footer .footerMenu li:nth-of-type(8) a:after,
+	footer .footerMenu li:nth-of-type(9) a:after 	{ content:none; }
+	
+	footer .footerMenu li:nth-child(1) a,
+	footer .footerMenu li:nth-child(3) a,
+	footer .footerMenu li:nth-child(5) a 	{ border-right:0; padding-left:0; }
+
+	footer .footerMenu li:nth-child(2) a,
+	footer .footerMenu li:nth-child(4) a,
+	footer .footerMenu li:nth-child(6) a 	{ padding-left:0; }
+	
+	footer .footerMenu li:nth-child(5) 	{ display:none; }
+
+	footer .footerMenu .wali 	{ display:none; }
+	footer .footerMenu .ccmli 	{ display:none; }
+	
+	footer .footerInfo 			{ width:844px; height:199px; margin:0 auto; padding:49px 170px 0 95px; position:relative; }
+	footer .footerInfo h2 		{ width:66px; height:98px; margin:0; position:absolute; left:0; top:44px; }
+	footer .footerInfo ul 		{ margin-bottom:12px; width:100%; overflow:hidden; }
+	footer .footerInfo li 		{ display:block; float:left; font-size:1.25rem; line-height:21px; color:#666; }
+	footer .footerInfo li:first-of-type:after { content:'|'; padding:0 22px 0;}
+	
+	footer .footerInfo li:nth-of-type(1),
+	footer .footerInfo li:nth-of-type(2),
+	footer .footerInfo li:nth-of-type(3),
+	footer .footerInfo li:nth-of-type(4)	{ display:block; }
+	
+	footer .footerInfo li:nth-of-type(1):after,
+	footer .footerInfo li:nth-of-type(2):after,
+	footer .footerInfo li:nth-of-type(4):after 	{ content:'|'; padding:0 13px 0;}
+	
+	footer .footerInfo li:nth-of-type(5):after	{ content:none; }
+	footer .footerInfo li:nth-of-type(6):after 	{ content:'|'; padding:0 13px 0; }
+
+	footer .footerInfo p 		{ height:auto; line-height:1; font-size:1.402rem; color:#666; background:none; text-align:left; }
+	
+	footer .footerInfo a:first-of-type 	{ display:block; background:url(../img/cjw-logo-wa.png) 0 0 no-repeat; background-size:auto 85px; width:64px; height:85px; position:absolute; right:105px; top:43px; }
+	footer .footerInfo a:last-of-type	{ display:block; background:url(../img/cjw-logo-ccm.png) 50% 0 no-repeat; background-size:62px; padding-top:71px; width:80px; height:85px; position:absolute; right:0; top:43px; text-align:center; font-size:1.2rem; color:#666; }
+
+}
+
+/*pc*/
+@media all and (min-width:1920px){
+	/*header*/
+	header .searchWrap  		{ height:68px; padding:23px 330px 16px 323px; }
+	header .searchWrap .searchInner 	{ display:block; width:100%; height:100%; margin:0; }
+	header .searchWrap a 		{ display:none; }
+	header .searchWrap input 	{ width:185px; height:28px; font-size:1.6rem; padding:0 17px 10px 0; }
+	header .searchWrap button 	{ width:17px; height:17px; margin-left:-17px; }
+	
+	header .searchWrap .loginNav a 		{ font-size:1.6rem; margin-top:6px; }
+	header .searchWrap .loginNav a:after 			{ font-size:1.6rem; padding:0 17px 0; }
+	
+	/*header 메뉴*/		
+	header .menuBox 			{ top:68px; height:430px; }
+
+	header .menuInner 				{ height:119px; padding:26px 321px 27px 323px; }
+	header .menuInner .menuTop 		{ width:184px; height:66px; }
+	header .menuInner .menuTop>h2 	{ height:66px; }
+	
+	.menuInner .mainmenu 		{ margin-top:26px; }
+	.menuInner .mainmenu>li>a 		{ height:23px; font-size:2.2rem; }
+	.menuInner .mainmenu>li>a:after 	{ font-size:2.2rem; padding:0 25px 0; }
+	
+	.menuInner .mainmenu>li>a .arrow 	{ top:67px; }
+	
+	/*메뉴바 fix*/
+	header .menuBox.fixed 			{ position:fixed; top:0; height:411px; }
+	header .menuInner.fix 			{ height:100px; border-bottom:1px solid #cfcfcf; padding:28px 321px 23px 323px; }
+	header .menuInner .menuTop.fix2 	{ width:140px; height:48px; }
+	.menuInner .mainmenu.fix3 	 		{ margin-top:12px; }
+	.menuInner .mainmenu>li>a.fix4 		{ height:21px; font-size:2rem; }
+	.menuInner .mainmenu>li>a.fix4:after 	{ font-size:2rem; padding:0 27px 0; }
+	.menuInner .mainmenu>li>a .arrow.fix5 	{ top:60px; }
+	/*End 메뉴바 fix*/
+		
+	.mainmenu .sidemenuWrap 	{ top:119px; }
+	.mainmenu .sidemenu 		{ width:calc(100% - 748px); padding:40px 0 40px ; }
+	.mainmenu .sidemenu>ul 		{ width:461px; column-gap:normal; }
+		
+	.mainmenu .right 			{ width:748px; padding:10px 321px 10px 0; background:none; background:url(../img/cjw-bg-nav-brandStory.jpg) right 310px top 100% no-repeat #fff; background-size:auto 260px; }
+	.mainmenu .right>div 		{ padding:42px 0 0 35px;}
+	
+	.mainmenu li:nth-of-type(2) .right 		{ background:url(../img/cjw-bg-nav-foodCast.jpg) right 321px top 100% no-repeat #fff; background-size:auto 250px; }
+	
+	.mainmenu li:nth-of-type(3) .right 		{ background:url(../img/cjw-bg-nav-foodKnowhow.jpg) right 321px top 100% no-repeat #fff; background-size:auto 250px; }
+	
+	.mainmenu li:nth-of-type(5) .right 			{ background:url(../img/cjw-bg-nav-friends.jpg) right 321px top 100% no-repeat #fff; background-size:auto 250px; }
+	
+	.mainmenu li:nth-of-type(6) .right 			{ background:url(../img/cjw-bg-nav-event.jpg) right 321px bottom 14px no-repeat #fff; background-size:auto 138px; }
+	
+	/*main*/
+	main .visual 		{ height:950px; margin-top:188px; padding:229px 0 0; background:url(../img/cjw-icon-mouse.png),url(../img/cjw-bg-main.jpg); background-repeat:no-repeat; background-position:50% 822px,center; background-size:34px auto,cover; }
+	main .visual p 		{ font-size:5.6rem; }
+	main .visual b 		{ font-size:12rem; line-height:165px; margin-bottom:23px; }
+	main .visual i 		{ font-size:3rem; line-height:40px; margin-bottom:79px; padding:0 394px 0; }
+	main .visual a.goBtn 		{ width:300px; }
+	main .visual a.arrowL 		{ display:block; width:36px; height:68px; background:url(../img/cjw-arrow-slider-left.png) 0 0 no-repeat; background-size:contain; position:absolute; top:50%; margin-top:-34px; left:72px; }
+	main .visual a.arrowR 		{ display:block; width:36px; height:68px; background:url(../img/cjw-arrow-slider-right.png) 0 0 no-repeat; background-size:contain; position:absolute; top:50%; margin-top:-34px; right:72px; }
+	
+	/*브랜드스토리*/
+	.brandstory 	{ height:868px; padding:158px 296px 0; background:url(../img/cjw-bg-product.png) 50% 100% no-repeat #fff; background-size:100% auto; }
+	.brandstory .story 		{ width:100%; }
+	.brandstory .arrowL 		{ display:block; width:36px; height:68px; background:url(../img/cjw-arrow-slider-left-grey.png) 0 0 no-repeat; background-size:contain; position:absolute; top:50%; margin-top:-34px; left:72px; }
+	.brandstory .arrowR 		{ display:block; width:36px; height:68px; background:url(../img/cjw-arrow-slider-right-grey.png) 0 0 no-repeat; background-size:contain; position:absolute; top:50%; margin-top:-34px; right:72px; }
+	.brandstory .slick-slide:nth-of-type(2n) 	{ margin:0 28px; }
+	.brandstory .slick-slide:nth-of-type(2n+1) 	{ margin:0 28px; }
+	.brandstory .storyWrap 		{ width:33.333%; height:515px; padding:33px 30px 0 28px; background-size:auto 515px; margin:0; }
+	.brandstory .storyWrap h3 	{ width:62px; height:21px; background-position:0 0; background-size:62px auto; margin-bottom:30px; }
+	.brandstory .storyWrap b 	{ font-size:3.5rem; line-height:40px; margin-bottom:19px; }
+	.brandstory .storyWrap p 	{ line-height:20px; font-size:1.5rem; margin-bottom:23px; }
+	.brandstory .storyWrap a 	{ width:150px; height:46px; line-height:42px; padding-left:10px; background:url(../img/cjw-plus-story-orange.png) right 10px top 50% no-repeat #fff; background-size:13px auto; font-size:1.4rem; top:239px; }
+	
+	.brandstory .fresh 			{ background-size:auto 515px; }
+	.brandstory .fresh a 		{ width:160px; background:url(../img/cjw-plus-story-blue.png) right 10px top 50% no-repeat #fff; background-size:13px auto; position:absolute; top:239px; }
+
+	.brandstory .classic 		{ background-size:auto 515px; }
+	.brandstory .classic a 		{ width:160px; background:url(../img/cjw-plus-story-red.png) right 8px top 50% no-repeat #fff; background-size:13px auto; position:absolute; top:239px; }
+	
+	/*푸드캐스트*/
+	.foodcast 		{ height:1380px; padding:184px 0 299px 0; }
+	.sectionV		{ width:auto; top:188px; left:322px; }
+	.sectionV h3 	{ font-size:8rem; margin-bottom:34px; }
+	.sectionV a 	{ width:330px; font-size:2.2rem; background:url(../img/cjw-plus-section-blue.png) right 24px top 50% no-repeat rgba(0,0,0,0.4); background-size:auto 20px; padding-left:19px; border:3px solid rgba(255,255,255,0.6); border-radius:3px; line-height:72px; }
+
+	.foodcast .sectionBox 		{ width:100%; height:100%; padding-right:321px; }
+	.sectionM 		{ width:calc(59.349% - 327px); height:897px; border:4px solid #fff; border-radius:5px; border-bottom-left-radius:0; }
+	.sectionM>a 	{ height:594px; }
+	.sectionM img 	{ height:594px; }
+	
+	.foodcast .castBg 		{ width:40.6504%; height:598px; background:#f4f4f4; float:left; }
+	.foodcast .castImg 		{ display:block; float:left; width:327px; height:299px; background:url(../img/cjw-img-foodLab.jpg) 50% 50% no-repeat; background-size:cover; margin-top:-299px; }
+
+	.sectionBtn 	{ width:40.6504%; height:299px; padding:50px 80px 64px 386px; border-radius:0; margin-top:299px; position:relative; background:url(../img/cjw-icon-foodLab.png) 100px 44px no-repeat #fff; background-size:220px auto; }
+	.sectionBtn strong 	{ font-size:3.4rem; }
+	.sectionBtn p 		{ font-size:1.8rem; margin-bottom:37px; }
+	.sectionBtn a 	{ width:150px; height:40px; margin:0 auto; position:static; font-size:1.6rem; line-height:40px; top:195px; }
+	
+	.second 	{ float:left; width:327px; height:299px; border-radius:0; margin:0; background:#02b5d6; padding:40px 34px 127px; }
+	.second strong:after 	{ background:rgba(255,255,255,0.5);  }
+	.second a 	{ background:#fff; color:#000; top:212px; left:50%;  }
+	
+	.sectionBtn.tablet 		{ padding:40px 30px 118px; background:#fff; }
+	.sectionBtn.tablet p 	{ margin-bottom:13px; font-size:2rem; }
+	.sectionBtn.tablet s 	{ font-size:1.6rem; }
+	.sectionBtn.tablet a 	{ top:212px; margin:0 auto; }
+	
+	/*푸드노하우*/
+	.foodknowhow 		{ z-index:9999; margin-top:-299px; height:1032px; padding:0; background:none; } 
+	.foodknowhow .sectionV  	{ height:299px; width:calc(32.395% + 648px); position:static; margin:0; float:right; padding:52px 321px 64px 0; text-align:right; overflow:hidden; }
+	.foodknowhow .sectionV h3 	{ margin-bottom:30px; color:#fff; }
+	.foodknowhow .sectionV a 	{ padding-left:17px; float:right; }
+	
+	.foodknowhow .sectionBox 	{ width:100%; height:100%; padding-right:321px; }
+	.foodknowhow .knowList 		{ width:40.6504%; height:100%; clear:both; float:left; margin-top:-299px; background:url(../img/cjw-bg-foodKnowhow.jpg) 100% 110% no-repeat #f4f4f4; background-size:auto 680px; }
+	.foodknowhow .knowNav 		{ top:0; margin:0; width:calc(100% - 323px); height:598px; border-radius:0; float:right; }
+	.foodknowhow .knowNav li 	{ height:150px; padding:40px 0 47px 0; }
+	.foodknowhow .knowNav li span 	{ font-size:1.6rem; margin-bottom:12px; }
+	.foodknowhow .knowNav li b  	{ font-size:3.5rem; }
+	.foodknowhow .knowNav li a 		{ top:51px; }
+	
+	.foodknowhow .sectionInner 	{ width:calc(100% - 40.6504%); height:100%; float:right; position:relative; }
+	.foodknowhow .sectionM 		{ position:absolute; margin:0; width:calc(100% + 321px); height:733px; top:0; left:0; border:0; border-radius:0; overflow:hidden; background:#f4f4f4; z-index:-1; }
+	.foodknowhow .sectionM a 	{ width:calc(100% - 9px); position:absolute; height:299px; left:330px; border:3px solid #fff; background-position:0 0; }
+	
+	.foodknowhow .sectionBtn 	{ width:calc(100% - 311px); height:299px; padding:61px 330px 59px 40px; border-radius:0; border-bottom-left-radius:4px; float:left; background:url(../img/cjw-icon-cjwRecipe.png) right 53px top 50% no-repeat #76d9c5; background-size:226px auto; }
+	.foodknowhow .sectionBtn>div 	{ width:100%; height:100%; position:relative; }
+	.foodknowhow .sectionBtn strong 		{ font-size:3.341rem; }
+	.foodknowhow .sectionBtn strong:after 	{ background:rgba(255,255,255,0.5); }
+	.foodknowhow .sectionBtn p 	{ margin-bottom:28px; }
+	.foodknowhow .sectionBtn a 	{ background:#fff; color:#000; position:absolute; top:139px;  }
+	
+	.foodknowhow .sectionBtn.tablet 	{ width:330px; padding:78px 33px 39px; border-radius:0; background:#fff; position:static; float:left; margin-right:calc(100% - 330px); }
+	.foodknowhow .sectionBtn.tablet>div { width:100%; height:100%; }
+	.foodknowhow .sectionBtn.tablet strong 		 	{ font-size:3.4rem; }
+	.foodknowhow .sectionBtn.tablet strong:after 	{ background:rgba(252,181,77,.7); }
+	.foodknowhow .sectionBtn.tablet p 	{ font-size:1.8rem; }
+	.foodknowhow .sectionBtn.tablet a 	{ background:#fcb54d; color:#fff; left:55px; top:142px; position:absolute; margin:0; }
+	.foodknowhow .sectionBtn.tablet>span 	{ display:block; position:absolute; left:0; top:0; padding:40px 0 0 38px; font-size:1.8rem; color:#fcb54d; }
+		
+	.foodknowhow .knowImg 		{ float:left; width:311px; height:299px; border:0; border-left:3px solid #fff; }
+	.foodknowhow .knowImg img 	{ width:auto; height:299px; }
+	
+	/*청정원프렌즈*/
+	.cjwfriends 		{ height:1170px; padding:156px 321px 118px 323px; }
+	.cjwfriends .sectionV 	 	{ top:158px; left:323px; }
+	.cjwfriends .sectionV h3	{ margin-bottom:40px; }
+	.cjwfriends .sectionV a 	{ background:url(../img/cjw-plus-section-blue.png) right 23px top 50% no-repeat rgba(0,0,0,0.4); background-size:auto 20px; }
+
+	.cjwfriends .sectionBtn 	{ width:50.078%; height:299px; padding:34px 330px 0 47px; float:left; text-align:left; background:url(../img/cjw-icon-friendsPanel.png) right 45px top 50% no-repeat #02b5d6; background-size:auto 196px; border-radius:5px; border-bottom-left-radius:0; }
+	.cjwfriends .sectionBtn strong 	{ font-size:1.8rem; color:rgba(255,255,255,0.7); margin-bottom:25px; }
+	.cjwfriends .sectionBtn p 	 	{ font-size:2.2rem; line-height:26px; }
+	.cjwfriends .sectionBtn a 		{ text-align:center; position:absolute; top:210px; margin:0; left:47px; }
+
+	.cjwfriends .friendsInner 	{ width:49.922%; height:597px; background:url(../img/cjw-icon-foodBox.png) right 36px bottom 31px no-repeat #f4cb4d; background-size:auto 232px; padding:36px 80px 0 35px; top:299px; border-top-left-radius:5px; border-bottom-left-radius:5px; }
+	.cjwfriends .friendsInner s 	{ margin-bottom:22px; }
+	.cjwfriends .friendsInner b 	{ font-size:4.5rem; line-height:50px; margin-bottom:35px; height:142px; margin-left:-4px; }
+	.cjwfriends .friendsInner i 	{ margin-bottom:27px; margin-left:2px; }
+	.cjwfriends .friendsInner p  	{ line-height:26px; font-size:2.2rem; margin-bottom:28px; }
+	.cjwfriends .friendsInner a 	{ width:150px; height:40px; line-height:40px; font-size:1.6rem; top:364px;  }
+
+	.cjwfriends .talk 		{ width:50.078%; height:597px; padding:0; }
+	.cjwfriends .talk a 	{ width:50%; height:50%; padding-top:196px; font-size:2.8rem; }
+	.cjwfriends .talk a:first-child 	{ border:0; background:url(../img/cjw-icon-foodEditor.png) 50% 48px no-repeat #fff; background-size:130px auto; margin-right:50%; }
+	.cjwfriends .talk a:nth-child(2) 	{ border:0; background:url(../img/cjw-icon-meetingTalk.png) 50% 45px no-repeat #fff; background-size:auto 126px; clear:both; float:right; border-top-right-radius:4px; border-bottom-right-radius:4px; }
+	.cjwfriends .talk a span 	{ margin-top:10px; }
+	
+	.cjwfriends .talk .friendsImg 	{ display:block; width:50%; height:50%; float:left; border:3px solid #fff; background:url(../img/cjw-img-foodEditor.jpg) 0 0 no-repeat; background-size:100% auto; }
+	
+	/*청정원SNS*/
+	.cjwsns 		{ height:900px; padding:156px 321px 148px 323px; background:url(../img/cjw-bg-sns1.png) 100% -50px no-repeat,url(../img/cjw-bg-sns2.png) 0 120% no-repeat #fff; background-size:387px auto,617px auto; overflow:hidden; }
+	.cjwsns>b 		{ font-size:8rem; line-height:1; margin-bottom:25px; text-align:left; }
+	.cjwsns>i 		{ font-size:2.8rem; line-height:1; text-align:left; }
+
+	.cjwsns .sns 	{ width:556px; height:56px; margin:39px 0 70px; }
+	.cjwsns .sns li { width:48px; height:48px; margin-right:18px; }
+
+	.cjwsns .snsInner 			{ width:50%; height:296px; float:left; }
+	.cjwsns .snsInner>a 		{ width:325px; height:296px; border:0; }
+	.cjwsns .snsInner>div 		{ width:calc(100% - 325px); height:296px; padding:36px 0 0 27px; border:0; }
+	.cjwsns .snsInner>div h3 	{ height:34px; line-height:34px; font-size:1.8rem; background:url(../img/cjw-sns-blog.png) right 19px top 0 no-repeat; background-size:34px; margin-bottom:98px; }
+	.cjwsns .snsInner>div a 	{ line-height:25px; font-size:2rem; }
+	
+	.cjwsns .snsInner:last-of-type 			{ clear:right; float:left; }
+	.cjwsns .snsInner:last-of-type>div		{ float:right; border-top:0; }
+	.cjwsns .snsInner:last-of-type>a 		{ float:left; border-left:0; border-top:0; }
+	.cjwsns .snsInner:last-of-type>div h3 	{ background:url(../img/cjw-sns-facebook.png) right 23px top 50% no-repeat; background-size:32px; }
+	.cjwsns .snsInner:last-of-type>div a 	{ padding-right:30px; }
+	
+	.cjwsns .snsNotice 		{ display:block; position:absolute; right:321px; top:175px; width:638px; height:280px; padding:0 41px 0 35px; }
+	.cjwsns .snsNotice>p 	{ font-size:1.8rem; color:#000; width:100%; height:61px; line-height:61px; border-bottom:1px solid #e3e3e3;  position:relative; }
+	.cjwsns .snsNotice>p>a 		{ display:block; position:absolute; top:15px; right:0; width:30px; height:30px; background:url(../img/cjw-plus-section-grey.png) 0 0 no-repeat; background-size:contain;}
+	.cjwsns .snsNotice>ul 		{ width:100%; padding:13px 0 27px 0; }
+	.cjwsns .snsNotice>ul>li 	{ font-size:2rem; color:#494949; line-height:45px; height:45px; position:relative; }
+	.cjwsns .snsNotice>ul>li:before 	{ content:''; display:block; float:left; width:3px; height:3px; border-radius:50%; background:#494949; margin:21px 10px 0 2px; }
+	.cjwsns .snsNotice>ul>li>a 			{ display:block; position:absolute; top:0; left:166px; color:#787878; }
+	.cjwsns .snsNotice>ul>li>a:hover 	{ text-decoration:underline; }
+	
+	/*footer*/
+	footer .footerMenu 			{ border-top:2px solid #d5d5d5; padding:0 321px 0 323px; position:relative; height:100px; }
+	footer .footerMenu ul 		{ width:auto; margin:0; height:100%; line-height:96px; }
+	footer .footerMenu ul li 	{ height:96; line-height:96px; }
+	footer .footerMenu li a 	{ font-size:1.8rem; }
+	footer .footerMenu li a:hover 		{ color:#02b5d6; }
+	footer .footerMenu .famsite 		{ color:#000; }
+
+	footer .footerMenu li:nth-child(4) 	{ display:none; }
+	footer .footerMenu li:nth-child(5) 	{ display:block; }
+	
+	footer .footerMenu .footerSns 		{ display:block; position:absolute; width:auto; height:33px; right:321px; top:34px; }
+	footer .footerMenu .footerSns>a 	{ display:block; float:left; width:33px; height:33px; margin-right:18px; }
+	footer .footerMenu .footerSns>a>img { width:100%; height:100%; }
+	footer .footerMenu .footerSns>a:last-child 	{ margin-right:0; }
+
+	footer .footerMenu .wali 	{ right:432px; top:136px; }
+	footer .footerMenu .ccmli 	{ right:312px; top:136px; }
+	
+	footer .footerInfo 			{ width:100%; padding:0 321px 0 323px; margin:0; }
+	footer .footerInfo h2 		{ width:58px; height:87px; left:323px; top:33px; }
+	footer .footerInfo ul 		{ margin-bottom:26px; width:936px; padding:38px 0 0 94px; }
+	footer .footerInfo li 		{ display:block; float:left; font-size:1.25rem; line-height:21px; color:#666; }
+	footer .footerInfo li:first-of-type:after { content:'|'; padding:0 15px 0; }
+	
+	footer .footerInfo li:nth-of-type(4):after	{ content:none; }
+	footer .footerInfo li:nth-of-type(3):after	{ content:'|'; padding:0 15px 0; }
+	footer .footerInfo li:nth-of-type(5):after	{ content:'|'; padding:0 15px 0; }
+
+	footer .footerInfo p 		{ font-size:1.4rem; padding-left:94px; }
+	
+	footer .footerInfo a:first-of-type 	{ right:432px; top:35px; }
+	footer .footerInfo a:last-of-type	{ right:313px; top:35px; }
+
+}

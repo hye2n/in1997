@@ -1,0 +1,47 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Iropke Batang';
+    src: url(../fonts/IropkeBatangM.eot);
+    src: url(../fonts/IropkeBatangM.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/IropkeBatangM.woff2) format('woff2'),
+        url(../fonts/IropkeBatangM.woff) format('woff'),
+        url(../fonts/IropkeBatangM.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Arita-dotum(TTF)';
+    src: url(../fonts/Arita-dotum-Medium_TTF.eot);
+    src: url(../fonts/Arita-dotum-Medium_TTF.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/Arita-dotum-Medium_TTF.woff2) format('woff2'),
+        url(../fonts/Arita-dotum-Medium_TTF.woff) format('woff'),
+        url(../fonts/Arita-dotum-Medium_TTF.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Digital-7';
+    src: url(../fonts/Digital-7.eot);
+    src: url(../fonts/Digital-7.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/Digital-7.woff2) format('woff2'),
+        url(../fonts/Digital-7.woff) format('woff'),
+        url(../fonts/Digital-7.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* 			{ margin:0; padding:0; box-sizing:border-box; font-family:'Iropke Batang','Arita-dotum(TTF)',Arial,'Digital-7','Malgun Gothic','맑은 고딕','Nanum Gothic','나눔 고딕','돋움',dotum,sans-serif; font-weight:400; }
+html 		{ font-size: 0.625em; }
+ul,ol,li  	{ list-style-type:none; }
+h1,h2,h3,h4,h5,h6 		{ margin:0; }
+a 			{ text-decoration:none; color:#000; }
+button 		{ border:none; background:none; text-indent:-9999px; cursor:pointer; }
+img			{ border:0; vertical-align:middle; max-width:100%; width:auto; }
+fieldset 	{ border:0; }
+.title 		{ text-indent:-9999px; font-size:0; }
+.blind 		{ position:absolute; top:-9999px; left:-9999px; }
+.indent 	{ text-indent:-9999px; font-size:0; }
+.clear:after { content:""; display:block; clear:both; }
+.none 		{ display:none; }  
+.slick-list			{ overflow:hidden; }
+.slick-slide		{ float:left; }

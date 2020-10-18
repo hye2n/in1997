@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+* 			{ margin:0; padding:0; box-sizing:border-box; font-family:'Nanum Gothic', sans-serif,'맑은고딕',sans-serif,'돋움',dotum,sans-serif,'굴림',sans-serif; font-weight:400; }
+html  		{ font-size: 0.625em; }
+ul,ol,li  	{ list-style-type:none; }
+h1,h2,h3,h4,h5,h6 		{ margin:0; }
+a 			{ text-decoration:none; color:#000; }
+button 		{ border:none; background:none; text-indent:-9999px; cursor:pointer; }
+img			{ border:0; vertical-align:middle; max-width:100%; width:auto; }
+fieldset 	{ border:0; }
+.title 		{ text-indent:-9999px; font-size:0; }
+.blind 		{ position:absolute; top:-9999px; left:-9999px; }
+.indent 	{ text-indent:-9999px; font-size:0; }
+.clear:after { content:""; display:block; clear:both; }
+.none 		{ display:none; }  
+.slick-list			{ overflow:hidden; }
+.slick-slide		{ float:left; }
